@@ -1,0 +1,1336 @@
+02/25/2022 08:50:02 - INFO - __main__ - Distributed environment: NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+Use FP16 precision: False
+
+02/25/2022 08:50:11 - INFO - filelock - Lock 140431463294816 acquired on /mnt/f/hf/models/6cc404ca8136bc87bae0fb24f2259904943d776a6c5ddc26598bbdc319476f42.0f9bcd8314d841c06633e7b92b04509f1802c16796ee67b0f1177065739e24ae.lock
+02/25/2022 08:50:12 - INFO - filelock - Lock 140431463294816 released on /mnt/f/hf/models/6cc404ca8136bc87bae0fb24f2259904943d776a6c5ddc26598bbdc319476f42.0f9bcd8314d841c06633e7b92b04509f1802c16796ee67b0f1177065739e24ae.lock
+02/25/2022 08:50:13 - INFO - filelock - Lock 140431339396160 acquired on /mnt/f/hf/models/58592490276d9ed1e8e33f3c12caf23000c22973cb2b3218c641bd74547a1889.fabda197bfe5d6a318c2833172d6757ccc7e49f692cb949a6fabf560cee81508.lock
+02/25/2022 08:53:08 - INFO - filelock - Lock 140431339396160 released on /mnt/f/hf/models/58592490276d9ed1e8e33f3c12caf23000c22973cb2b3218c641bd74547a1889.fabda197bfe5d6a318c2833172d6757ccc7e49f692cb949a6fabf560cee81508.lock
+02/25/2022 08:53:09 - WARNING - datasets.builder - No config specified, defaulting to: sp4ner/spo
+02/25/2022 08:53:09 - WARNING - datasets.builder - Reusing dataset sp4ner (caches/sp4ner/spo/1.1.0/ab2fc9b901bf661cad479fd7ce7e0f3c95fb5427c627fa06066607e74827c75f)
+02/25/2022 08:53:09 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at caches/sp4ner/spo/1.1.0/ab2fc9b901bf661cad479fd7ce7e0f3c95fb5427c627fa06066607e74827c75f/cache-a926c494376aca22.arrow
+02/25/2022 08:53:09 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at caches/sp4ner/spo/1.1.0/ab2fc9b901bf661cad479fd7ce7e0f3c95fb5427c627fa06066607e74827c75f/cache-aad828f1c4514b6e.arrow
+02/25/2022 08:53:10 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at caches/sp4ner/spo/1.1.0/ab2fc9b901bf661cad479fd7ce7e0f3c95fb5427c627fa06066607e74827c75f/cache-9e8bc0438c427a3d.arrow
+02/25/2022 08:53:22 - INFO - utils.data - Sample 167621 of the training set:
+02/25/2022 08:53:22 - INFO - utils.data - attention_mask = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+02/25/2022 08:53:22 - INFO - utils.data - input_ids = [101, 8121, 3698, 952, 756, 2128, 1277, 1765, 1905, 762, 4178, 2372, 2108, 7599, 3698, 952, 8024, 3698, 952, 3946, 1469, 8024, 1724, 2108, 1146, 3209, 8024, 7433, 7030, 1041, 3764, 102]
+02/25/2022 08:53:22 - INFO - utils.data - labels = [[4, 6, 44, 9, 15]]
+02/25/2022 08:53:24 - INFO - __main__ - ********** Running training **********
+02/25/2022 08:53:24 - INFO - __main__ -   Num examples = 172858
+02/25/2022 08:53:24 - INFO - __main__ -   Num Epochs = 20
+02/25/2022 08:53:24 - INFO - __main__ -   Instantaneous batch size per device = 16
+02/25/2022 08:53:24 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
+02/25/2022 08:53:24 - INFO - __main__ -   Gradient Accumulation steps = 1
+02/25/2022 08:53:24 - INFO - __main__ -   Gradient Accumulation steps = 1
+02/25/2022 08:53:24 - INFO - __main__ -   Total optimization steps = 216080
+02/25/2022 08:53:25 - INFO - __main__ - **********  Configuration Arguments **********
+02/25/2022 08:53:25 - INFO - __main__ - adam_epsilon: 1e-08
+02/25/2022 08:53:25 - INFO - __main__ - cache_dir: caches
+02/25/2022 08:53:25 - INFO - __main__ - gradient_accumulation_steps: 1
+02/25/2022 08:53:25 - INFO - __main__ - learning_rate: 3e-05
+02/25/2022 08:53:25 - INFO - __main__ - log_dir: ./outputs/bert-bert-base-chinese/logs
+02/25/2022 08:53:25 - INFO - __main__ - logging_steps: 200
+02/25/2022 08:53:25 - INFO - __main__ - lr_scheduler_type: linear
+02/25/2022 08:53:25 - INFO - __main__ - max_grad_norm: 1.0
+02/25/2022 08:53:25 - INFO - __main__ - max_length: 128
+02/25/2022 08:53:25 - INFO - __main__ - max_train_steps: 216080
+02/25/2022 08:53:25 - INFO - __main__ - method: gplinker
+02/25/2022 08:53:25 - INFO - __main__ - model_type: bert
+02/25/2022 08:53:25 - INFO - __main__ - model_weights: bert-base-chinese
+02/25/2022 08:53:25 - INFO - __main__ - num_labels: 49
+02/25/2022 08:53:25 - INFO - __main__ - num_train_epochs: 20
+02/25/2022 08:53:25 - INFO - __main__ - num_warmup_steps: 21608
+02/25/2022 08:53:25 - INFO - __main__ - num_warmup_steps_or_radios: 0.1
+02/25/2022 08:53:25 - INFO - __main__ - output_dir: ./outputs/bert-bert-base-chinese
+02/25/2022 08:53:25 - INFO - __main__ - per_device_eval_batch_size: 32
+02/25/2022 08:53:25 - INFO - __main__ - per_device_train_batch_size: 16
+02/25/2022 08:53:25 - INFO - __main__ - pretrained_model_name_or_path: bert-base-chinese
+02/25/2022 08:53:25 - INFO - __main__ - save_steps: 10804
+02/25/2022 08:53:25 - INFO - __main__ - seed: 42
+02/25/2022 08:53:25 - INFO - __main__ - tokenizer_name: None
+02/25/2022 08:53:25 - INFO - __main__ - topk: 2
+02/25/2022 08:53:25 - INFO - __main__ - total_batch_size: 16
+02/25/2022 08:53:25 - INFO - __main__ - weight_decay: 0.02
+02/25/2022 08:53:25 - INFO - __main__ - writer_type: tensorboard
+02/25/2022 08:53:25 - INFO - __main__ - **************************************************
+02/25/2022 08:53:44 - INFO - __main__ - global_steps 200 - lr: 0.00000028  loss: 256.47521027
+02/25/2022 08:54:03 - INFO - __main__ - global_steps 400 - lr: 0.00000056  loss: 251.02339325
+02/25/2022 08:54:22 - INFO - __main__ - global_steps 600 - lr: 0.00000083  loss: 225.54966370
+02/25/2022 08:54:41 - INFO - __main__ - global_steps 800 - lr: 0.00000111  loss: 182.80676590
+02/25/2022 08:55:01 - INFO - __main__ - global_steps 1000 - lr: 0.00000139  loss: 123.88692238
+02/25/2022 08:55:20 - INFO - __main__ - global_steps 1200 - lr: 0.00000167  loss: 49.67640445
+02/25/2022 08:55:39 - INFO - __main__ - global_steps 1400 - lr: 0.00000194  loss: 18.92015878
+02/25/2022 08:55:59 - INFO - __main__ - global_steps 1600 - lr: 0.00000222  loss: 16.39357951
+02/25/2022 08:56:18 - INFO - __main__ - global_steps 1800 - lr: 0.00000250  loss: 10.60216876
+02/25/2022 08:56:37 - INFO - __main__ - global_steps 2000 - lr: 0.00000278  loss: 7.94860551
+02/25/2022 08:56:56 - INFO - __main__ - global_steps 2200 - lr: 0.00000305  loss: 6.35491719
+02/25/2022 08:57:16 - INFO - __main__ - global_steps 2400 - lr: 0.00000333  loss: 5.06892933
+02/25/2022 08:57:35 - INFO - __main__ - global_steps 2600 - lr: 0.00000361  loss: 4.33921261
+02/25/2022 08:57:55 - INFO - __main__ - global_steps 2800 - lr: 0.00000389  loss: 3.58252167
+02/25/2022 08:58:14 - INFO - __main__ - global_steps 3000 - lr: 0.00000417  loss: 3.01022341
+02/25/2022 08:58:34 - INFO - __main__ - global_steps 3200 - lr: 0.00000444  loss: 2.68981515
+02/25/2022 08:58:53 - INFO - __main__ - global_steps 3400 - lr: 0.00000472  loss: 2.21766736
+02/25/2022 08:59:12 - INFO - __main__ - global_steps 3600 - lr: 0.00000500  loss: 1.80471180
+02/25/2022 08:59:32 - INFO - __main__ - global_steps 3800 - lr: 0.00000528  loss: 1.46831212
+02/25/2022 08:59:51 - INFO - __main__ - global_steps 4000 - lr: 0.00000555  loss: 1.38720121
+02/25/2022 09:00:11 - INFO - __main__ - global_steps 4200 - lr: 0.00000583  loss: 1.08256780
+02/25/2022 09:00:30 - INFO - __main__ - global_steps 4400 - lr: 0.00000611  loss: 1.13278826
+02/25/2022 09:00:49 - INFO - __main__ - global_steps 4600 - lr: 0.00000639  loss: 0.72828520
+02/25/2022 09:01:08 - INFO - __main__ - global_steps 4800 - lr: 0.00000666  loss: 0.64088360
+02/25/2022 09:01:28 - INFO - __main__ - global_steps 5000 - lr: 0.00000694  loss: 0.62712942
+02/25/2022 09:01:47 - INFO - __main__ - global_steps 5200 - lr: 0.00000722  loss: 0.54525503
+02/25/2022 09:02:07 - INFO - __main__ - global_steps 5400 - lr: 0.00000750  loss: 0.44532317
+02/25/2022 09:02:26 - INFO - __main__ - global_steps 5600 - lr: 0.00000777  loss: 0.30562467
+02/25/2022 09:02:46 - INFO - __main__ - global_steps 5800 - lr: 0.00000805  loss: 0.24696780
+02/25/2022 09:03:06 - INFO - __main__ - global_steps 6000 - lr: 0.00000833  loss: 0.17641429
+02/25/2022 09:03:25 - INFO - __main__ - global_steps 6200 - lr: 0.00000861  loss: 0.13728442
+02/25/2022 09:03:45 - INFO - __main__ - global_steps 6400 - lr: 0.00000889  loss: 0.11041033
+02/25/2022 09:04:05 - INFO - __main__ - global_steps 6600 - lr: 0.00000916  loss: 0.02082737
+02/25/2022 09:04:25 - INFO - __main__ - global_steps 6800 - lr: 0.00000944  loss: 0.02275038
+02/25/2022 09:04:44 - INFO - __main__ - global_steps 7000 - lr: 0.00000972  loss: -0.17081640
+02/25/2022 09:05:04 - INFO - __main__ - global_steps 7200 - lr: 0.00001000  loss: -0.08725317
+02/25/2022 09:05:23 - INFO - __main__ - global_steps 7400 - lr: 0.00001027  loss: -0.18582940
+02/25/2022 09:05:43 - INFO - __main__ - global_steps 7600 - lr: 0.00001055  loss: -0.24865328
+02/25/2022 09:06:03 - INFO - __main__ - global_steps 7800 - lr: 0.00001083  loss: -0.24472277
+02/25/2022 09:06:22 - INFO - __main__ - global_steps 8000 - lr: 0.00001111  loss: -0.27211877
+02/25/2022 09:06:42 - INFO - __main__ - global_steps 8200 - lr: 0.00001138  loss: -0.20848662
+02/25/2022 09:07:02 - INFO - __main__ - global_steps 8400 - lr: 0.00001166  loss: -0.36471479
+02/25/2022 09:07:21 - INFO - __main__ - global_steps 8600 - lr: 0.00001194  loss: -0.43745858
+02/25/2022 09:07:41 - INFO - __main__ - global_steps 8800 - lr: 0.00001222  loss: -0.34626778
+02/25/2022 09:08:01 - INFO - __main__ - global_steps 9000 - lr: 0.00001250  loss: -0.43088604
+02/25/2022 09:08:20 - INFO - __main__ - global_steps 9200 - lr: 0.00001277  loss: -0.26580602
+02/25/2022 09:08:40 - INFO - __main__ - global_steps 9400 - lr: 0.00001305  loss: -0.36896908
+02/25/2022 09:08:59 - INFO - __main__ - global_steps 9600 - lr: 0.00001333  loss: -0.38100360
+02/25/2022 09:09:19 - INFO - __main__ - global_steps 9800 - lr: 0.00001361  loss: -0.42920066
+02/25/2022 09:09:39 - INFO - __main__ - global_steps 10000 - lr: 0.00001388  loss: -0.49916798
+02/25/2022 09:09:58 - INFO - __main__ - global_steps 10200 - lr: 0.00001416  loss: -0.43171651
+02/25/2022 09:10:18 - INFO - __main__ - global_steps 10400 - lr: 0.00001444  loss: -0.46773506
+02/25/2022 09:10:37 - INFO - __main__ - global_steps 10600 - lr: 0.00001472  loss: -0.39728481
+02/25/2022 09:10:57 - INFO - __main__ - global_steps 10800 - lr: 0.00001499  loss: -0.43531443
+02/25/2022 09:10:57 - INFO - __main__ - ********** Evaluate Step 10804 **********
+02/25/2022 09:10:57 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 09:12:10 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 09:12:10 - INFO - __main__ - f1 = 0.787919563429768
+02/25/2022 09:12:10 - INFO - __main__ - precision = 0.767246937459704
+02/25/2022 09:12:10 - INFO - __main__ - recall = 0.8097370385003736
+02/25/2022 09:12:10 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 09:12:10 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 09:12:10 - INFO - __main__ - *************************************
+02/25/2022 09:12:30 - INFO - __main__ - global_steps 11000 - lr: 0.00001527  loss: -0.68539080
+02/25/2022 09:12:50 - INFO - __main__ - global_steps 11200 - lr: 0.00001555  loss: -0.62138836
+02/25/2022 09:13:09 - INFO - __main__ - global_steps 11400 - lr: 0.00001583  loss: -0.58787335
+02/25/2022 09:13:29 - INFO - __main__ - global_steps 11600 - lr: 0.00001611  loss: -0.57542096
+02/25/2022 09:13:49 - INFO - __main__ - global_steps 11800 - lr: 0.00001638  loss: -0.53685968
+02/25/2022 09:14:09 - INFO - __main__ - global_steps 12000 - lr: 0.00001666  loss: -0.60674231
+02/25/2022 09:14:28 - INFO - __main__ - global_steps 12200 - lr: 0.00001694  loss: -0.61708921
+02/25/2022 09:14:48 - INFO - __main__ - global_steps 12400 - lr: 0.00001722  loss: -0.62722989
+02/25/2022 09:15:07 - INFO - __main__ - global_steps 12600 - lr: 0.00001749  loss: -0.49764148
+02/25/2022 09:15:27 - INFO - __main__ - global_steps 12800 - lr: 0.00001777  loss: -0.75700987
+02/25/2022 09:15:47 - INFO - __main__ - global_steps 13000 - lr: 0.00001805  loss: -0.70139782
+02/25/2022 09:16:07 - INFO - __main__ - global_steps 13200 - lr: 0.00001833  loss: -0.67978041
+02/25/2022 09:16:26 - INFO - __main__ - global_steps 13400 - lr: 0.00001860  loss: -0.76622731
+02/25/2022 09:16:45 - INFO - __main__ - global_steps 13600 - lr: 0.00001888  loss: -0.53256435
+02/25/2022 09:17:05 - INFO - __main__ - global_steps 13800 - lr: 0.00001916  loss: -0.66675667
+02/25/2022 09:17:25 - INFO - __main__ - global_steps 14000 - lr: 0.00001944  loss: -0.52787295
+02/25/2022 09:17:44 - INFO - __main__ - global_steps 14200 - lr: 0.00001971  loss: -0.70052479
+02/25/2022 09:18:04 - INFO - __main__ - global_steps 14400 - lr: 0.00001999  loss: -0.65735865
+02/25/2022 09:18:24 - INFO - __main__ - global_steps 14600 - lr: 0.00002027  loss: -0.66970636
+02/25/2022 09:18:43 - INFO - __main__ - global_steps 14800 - lr: 0.00002055  loss: -0.79826020
+02/25/2022 09:19:03 - INFO - __main__ - global_steps 15000 - lr: 0.00002083  loss: -0.76197865
+02/25/2022 09:19:22 - INFO - __main__ - global_steps 15200 - lr: 0.00002110  loss: -0.69146453
+02/25/2022 09:19:42 - INFO - __main__ - global_steps 15400 - lr: 0.00002138  loss: -0.70985508
+02/25/2022 09:20:01 - INFO - __main__ - global_steps 15600 - lr: 0.00002166  loss: -0.74585801
+02/25/2022 09:20:21 - INFO - __main__ - global_steps 15800 - lr: 0.00002194  loss: -0.77252938
+02/25/2022 09:20:40 - INFO - __main__ - global_steps 16000 - lr: 0.00002221  loss: -0.64903614
+02/25/2022 09:21:00 - INFO - __main__ - global_steps 16200 - lr: 0.00002249  loss: -0.73214922
+02/25/2022 09:21:20 - INFO - __main__ - global_steps 16400 - lr: 0.00002277  loss: -0.73215745
+02/25/2022 09:21:39 - INFO - __main__ - global_steps 16600 - lr: 0.00002305  loss: -0.77590473
+02/25/2022 09:21:58 - INFO - __main__ - global_steps 16800 - lr: 0.00002332  loss: -0.77333416
+02/25/2022 09:22:18 - INFO - __main__ - global_steps 17000 - lr: 0.00002360  loss: -0.80413003
+02/25/2022 09:22:37 - INFO - __main__ - global_steps 17200 - lr: 0.00002388  loss: -0.65547090
+02/25/2022 09:22:56 - INFO - __main__ - global_steps 17400 - lr: 0.00002416  loss: -0.63007971
+02/25/2022 09:23:16 - INFO - __main__ - global_steps 17600 - lr: 0.00002444  loss: -0.78468159
+02/25/2022 09:23:35 - INFO - __main__ - global_steps 17800 - lr: 0.00002471  loss: -0.69076013
+02/25/2022 09:23:54 - INFO - __main__ - global_steps 18000 - lr: 0.00002499  loss: -0.73117159
+02/25/2022 09:24:13 - INFO - __main__ - global_steps 18200 - lr: 0.00002527  loss: -0.67743825
+02/25/2022 09:24:33 - INFO - __main__ - global_steps 18400 - lr: 0.00002555  loss: -0.77540875
+02/25/2022 09:24:52 - INFO - __main__ - global_steps 18600 - lr: 0.00002582  loss: -0.68101490
+02/25/2022 09:25:11 - INFO - __main__ - global_steps 18800 - lr: 0.00002610  loss: -0.68109250
+02/25/2022 09:25:31 - INFO - __main__ - global_steps 19000 - lr: 0.00002638  loss: -0.79589494
+02/25/2022 09:25:50 - INFO - __main__ - global_steps 19200 - lr: 0.00002666  loss: -0.71000585
+02/25/2022 09:26:09 - INFO - __main__ - global_steps 19400 - lr: 0.00002693  loss: -0.69516839
+02/25/2022 09:26:29 - INFO - __main__ - global_steps 19600 - lr: 0.00002721  loss: -0.64153539
+02/25/2022 09:26:48 - INFO - __main__ - global_steps 19800 - lr: 0.00002749  loss: -0.73986459
+02/25/2022 09:27:07 - INFO - __main__ - global_steps 20000 - lr: 0.00002777  loss: -0.79630592
+02/25/2022 09:27:26 - INFO - __main__ - global_steps 20200 - lr: 0.00002805  loss: -0.79175674
+02/25/2022 09:27:45 - INFO - __main__ - global_steps 20400 - lr: 0.00002832  loss: -0.69537251
+02/25/2022 09:28:04 - INFO - __main__ - global_steps 20600 - lr: 0.00002860  loss: -0.69031068
+02/25/2022 09:28:23 - INFO - __main__ - global_steps 20800 - lr: 0.00002888  loss: -0.75867008
+02/25/2022 09:28:43 - INFO - __main__ - global_steps 21000 - lr: 0.00002916  loss: -0.63451824
+02/25/2022 09:29:02 - INFO - __main__ - global_steps 21200 - lr: 0.00002943  loss: -0.69935240
+02/25/2022 09:29:21 - INFO - __main__ - global_steps 21400 - lr: 0.00002971  loss: -0.74839841
+02/25/2022 09:29:40 - INFO - __main__ - global_steps 21600 - lr: 0.00002999  loss: -0.71765886
+02/25/2022 09:29:41 - INFO - __main__ - ********** Evaluate Step 21608 **********
+02/25/2022 09:29:41 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 09:30:52 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 09:30:52 - INFO - __main__ - f1 = 0.7985907222548448
+02/25/2022 09:30:52 - INFO - __main__ - precision = 0.8223638308758551
+02/25/2022 09:30:52 - INFO - __main__ - recall = 0.7761534746916025
+02/25/2022 09:30:52 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 09:30:52 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 09:30:52 - INFO - __main__ - *************************************
+02/25/2022 09:31:11 - INFO - __main__ - global_steps 21800 - lr: 0.00002997  loss: -0.92675241
+02/25/2022 09:31:30 - INFO - __main__ - global_steps 22000 - lr: 0.00002994  loss: -1.03293748
+02/25/2022 09:31:49 - INFO - __main__ - global_steps 22200 - lr: 0.00002991  loss: -0.92120664
+02/25/2022 09:32:08 - INFO - __main__ - global_steps 22400 - lr: 0.00002988  loss: -0.96455757
+02/25/2022 09:32:27 - INFO - __main__ - global_steps 22600 - lr: 0.00002985  loss: -0.96311163
+02/25/2022 09:32:46 - INFO - __main__ - global_steps 22800 - lr: 0.00002982  loss: -0.93186819
+02/25/2022 09:33:05 - INFO - __main__ - global_steps 23000 - lr: 0.00002979  loss: -1.00250955
+02/25/2022 09:33:25 - INFO - __main__ - global_steps 23200 - lr: 0.00002975  loss: -0.92998045
+02/25/2022 09:33:44 - INFO - __main__ - global_steps 23400 - lr: 0.00002972  loss: -0.91999557
+02/25/2022 09:34:03 - INFO - __main__ - global_steps 23600 - lr: 0.00002969  loss: -0.98645147
+02/25/2022 09:34:23 - INFO - __main__ - global_steps 23800 - lr: 0.00002966  loss: -1.03404207
+02/25/2022 09:34:42 - INFO - __main__ - global_steps 24000 - lr: 0.00002963  loss: -0.92459630
+02/25/2022 09:35:02 - INFO - __main__ - global_steps 24200 - lr: 0.00002960  loss: -0.91342059
+02/25/2022 09:35:21 - INFO - __main__ - global_steps 24400 - lr: 0.00002957  loss: -0.95814532
+02/25/2022 09:35:41 - INFO - __main__ - global_steps 24600 - lr: 0.00002954  loss: -1.03440265
+02/25/2022 09:36:00 - INFO - __main__ - global_steps 24800 - lr: 0.00002951  loss: -0.96765665
+02/25/2022 09:36:20 - INFO - __main__ - global_steps 25000 - lr: 0.00002948  loss: -0.96280541
+02/25/2022 09:36:39 - INFO - __main__ - global_steps 25200 - lr: 0.00002945  loss: -0.96865799
+02/25/2022 09:36:59 - INFO - __main__ - global_steps 25400 - lr: 0.00002942  loss: -1.01383469
+02/25/2022 09:37:18 - INFO - __main__ - global_steps 25600 - lr: 0.00002938  loss: -1.05447153
+02/25/2022 09:37:37 - INFO - __main__ - global_steps 25800 - lr: 0.00002935  loss: -0.99504229
+02/25/2022 09:37:57 - INFO - __main__ - global_steps 26000 - lr: 0.00002932  loss: -1.00128792
+02/25/2022 09:38:16 - INFO - __main__ - global_steps 26200 - lr: 0.00002929  loss: -1.05069910
+02/25/2022 09:38:36 - INFO - __main__ - global_steps 26400 - lr: 0.00002926  loss: -0.93703561
+02/25/2022 09:38:56 - INFO - __main__ - global_steps 26600 - lr: 0.00002923  loss: -0.90670808
+02/25/2022 09:39:15 - INFO - __main__ - global_steps 26800 - lr: 0.00002920  loss: -0.87079610
+02/25/2022 09:39:35 - INFO - __main__ - global_steps 27000 - lr: 0.00002917  loss: -0.99641950
+02/25/2022 09:39:54 - INFO - __main__ - global_steps 27200 - lr: 0.00002914  loss: -0.98148806
+02/25/2022 09:40:14 - INFO - __main__ - global_steps 27400 - lr: 0.00002911  loss: -0.99117866
+02/25/2022 09:40:34 - INFO - __main__ - global_steps 27600 - lr: 0.00002908  loss: -0.97357017
+02/25/2022 09:40:53 - INFO - __main__ - global_steps 27800 - lr: 0.00002904  loss: -0.94476190
+02/25/2022 09:41:12 - INFO - __main__ - global_steps 28000 - lr: 0.00002901  loss: -1.02907200
+02/25/2022 09:41:32 - INFO - __main__ - global_steps 28200 - lr: 0.00002898  loss: -0.97716591
+02/25/2022 09:41:52 - INFO - __main__ - global_steps 28400 - lr: 0.00002895  loss: -0.98603203
+02/25/2022 09:42:11 - INFO - __main__ - global_steps 28600 - lr: 0.00002892  loss: -0.92233384
+02/25/2022 09:42:30 - INFO - __main__ - global_steps 28800 - lr: 0.00002889  loss: -1.06765899
+02/25/2022 09:42:49 - INFO - __main__ - global_steps 29000 - lr: 0.00002886  loss: -0.98687174
+02/25/2022 09:43:09 - INFO - __main__ - global_steps 29200 - lr: 0.00002883  loss: -1.00294366
+02/25/2022 09:43:28 - INFO - __main__ - global_steps 29400 - lr: 0.00002880  loss: -0.88680623
+02/25/2022 09:43:47 - INFO - __main__ - global_steps 29600 - lr: 0.00002877  loss: -1.04607375
+02/25/2022 09:44:06 - INFO - __main__ - global_steps 29800 - lr: 0.00002874  loss: -0.97396654
+02/25/2022 09:44:26 - INFO - __main__ - global_steps 30000 - lr: 0.00002871  loss: -0.98018176
+02/25/2022 09:44:45 - INFO - __main__ - global_steps 30200 - lr: 0.00002867  loss: -1.03399245
+02/25/2022 09:45:05 - INFO - __main__ - global_steps 30400 - lr: 0.00002864  loss: -1.02780704
+02/25/2022 09:45:25 - INFO - __main__ - global_steps 30600 - lr: 0.00002861  loss: -0.92124453
+02/25/2022 09:45:44 - INFO - __main__ - global_steps 30800 - lr: 0.00002858  loss: -0.99106651
+02/25/2022 09:46:04 - INFO - __main__ - global_steps 31000 - lr: 0.00002855  loss: -0.91585163
+02/25/2022 09:46:24 - INFO - __main__ - global_steps 31200 - lr: 0.00002852  loss: -1.06985267
+02/25/2022 09:46:45 - INFO - __main__ - global_steps 31400 - lr: 0.00002849  loss: -1.00904039
+02/25/2022 09:47:05 - INFO - __main__ - global_steps 31600 - lr: 0.00002846  loss: -1.11982344
+02/25/2022 09:47:24 - INFO - __main__ - global_steps 31800 - lr: 0.00002843  loss: -1.06134430
+02/25/2022 09:47:44 - INFO - __main__ - global_steps 32000 - lr: 0.00002840  loss: -1.04036072
+02/25/2022 09:48:04 - INFO - __main__ - global_steps 32200 - lr: 0.00002837  loss: -0.83840372
+02/25/2022 09:48:23 - INFO - __main__ - global_steps 32400 - lr: 0.00002834  loss: -1.01257607
+02/25/2022 09:48:24 - INFO - __main__ - ********** Evaluate Step 32412 **********
+02/25/2022 09:48:24 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 09:49:37 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 09:49:37 - INFO - __main__ - f1 = 0.8119146634209018
+02/25/2022 09:49:37 - INFO - __main__ - precision = 0.8343409075116396
+02/25/2022 09:49:37 - INFO - __main__ - recall = 0.7906624522586597
+02/25/2022 09:49:37 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 09:49:37 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 09:49:38 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-10804-spo-f1-0.787919563429768
+02/25/2022 09:49:38 - INFO - __main__ - *************************************
+02/25/2022 09:49:57 - INFO - __main__ - global_steps 32600 - lr: 0.00002830  loss: -1.17753535
+02/25/2022 09:50:16 - INFO - __main__ - global_steps 32800 - lr: 0.00002827  loss: -1.11233246
+02/25/2022 09:50:36 - INFO - __main__ - global_steps 33000 - lr: 0.00002824  loss: -1.34765811
+02/25/2022 09:50:55 - INFO - __main__ - global_steps 33200 - lr: 0.00002821  loss: -1.14490576
+02/25/2022 09:51:15 - INFO - __main__ - global_steps 33400 - lr: 0.00002818  loss: -1.11589123
+02/25/2022 09:51:34 - INFO - __main__ - global_steps 33600 - lr: 0.00002815  loss: -1.28795141
+02/25/2022 09:51:54 - INFO - __main__ - global_steps 33800 - lr: 0.00002812  loss: -1.32678587
+02/25/2022 09:52:13 - INFO - __main__ - global_steps 34000 - lr: 0.00002809  loss: -1.28438263
+02/25/2022 09:52:33 - INFO - __main__ - global_steps 34200 - lr: 0.00002806  loss: -1.23491039
+02/25/2022 09:52:52 - INFO - __main__ - global_steps 34400 - lr: 0.00002803  loss: -1.25623272
+02/25/2022 09:53:12 - INFO - __main__ - global_steps 34600 - lr: 0.00002800  loss: -1.24093251
+02/25/2022 09:53:32 - INFO - __main__ - global_steps 34800 - lr: 0.00002796  loss: -1.15088777
+02/25/2022 09:53:53 - INFO - __main__ - global_steps 35000 - lr: 0.00002793  loss: -1.18201380
+02/25/2022 09:54:13 - INFO - __main__ - global_steps 35200 - lr: 0.00002790  loss: -1.20587731
+02/25/2022 09:54:33 - INFO - __main__ - global_steps 35400 - lr: 0.00002787  loss: -1.24227970
+02/25/2022 09:54:52 - INFO - __main__ - global_steps 35600 - lr: 0.00002784  loss: -1.20957871
+02/25/2022 09:55:13 - INFO - __main__ - global_steps 35800 - lr: 0.00002781  loss: -1.31284606
+02/25/2022 09:55:33 - INFO - __main__ - global_steps 36000 - lr: 0.00002778  loss: -1.23212443
+02/25/2022 09:55:53 - INFO - __main__ - global_steps 36200 - lr: 0.00002775  loss: -1.20590835
+02/25/2022 09:56:12 - INFO - __main__ - global_steps 36400 - lr: 0.00002772  loss: -1.24444812
+02/25/2022 09:56:32 - INFO - __main__ - global_steps 36600 - lr: 0.00002769  loss: -1.21245606
+02/25/2022 09:56:51 - INFO - __main__ - global_steps 36800 - lr: 0.00002766  loss: -1.22753499
+02/25/2022 09:57:10 - INFO - __main__ - global_steps 37000 - lr: 0.00002763  loss: -1.25036457
+02/25/2022 09:57:29 - INFO - __main__ - global_steps 37200 - lr: 0.00002759  loss: -1.23678294
+02/25/2022 09:57:49 - INFO - __main__ - global_steps 37400 - lr: 0.00002756  loss: -1.20565418
+02/25/2022 09:58:09 - INFO - __main__ - global_steps 37600 - lr: 0.00002753  loss: -1.26803920
+02/25/2022 09:58:30 - INFO - __main__ - global_steps 37800 - lr: 0.00002750  loss: -1.12607071
+02/25/2022 09:58:50 - INFO - __main__ - global_steps 38000 - lr: 0.00002747  loss: -1.26144125
+02/25/2022 09:59:09 - INFO - __main__ - global_steps 38200 - lr: 0.00002744  loss: -1.12376142
+02/25/2022 09:59:29 - INFO - __main__ - global_steps 38400 - lr: 0.00002741  loss: -1.25486138
+02/25/2022 09:59:49 - INFO - __main__ - global_steps 38600 - lr: 0.00002738  loss: -1.24564522
+02/25/2022 10:00:10 - INFO - __main__ - global_steps 38800 - lr: 0.00002735  loss: -1.19627902
+02/25/2022 10:00:29 - INFO - __main__ - global_steps 39000 - lr: 0.00002732  loss: -1.16826084
+02/25/2022 10:00:49 - INFO - __main__ - global_steps 39200 - lr: 0.00002729  loss: -1.30798666
+02/25/2022 10:01:09 - INFO - __main__ - global_steps 39400 - lr: 0.00002726  loss: -1.24568398
+02/25/2022 10:01:29 - INFO - __main__ - global_steps 39600 - lr: 0.00002722  loss: -1.31734636
+02/25/2022 10:01:49 - INFO - __main__ - global_steps 39800 - lr: 0.00002719  loss: -1.16297744
+02/25/2022 10:02:09 - INFO - __main__ - global_steps 40000 - lr: 0.00002716  loss: -1.25874316
+02/25/2022 10:02:28 - INFO - __main__ - global_steps 40200 - lr: 0.00002713  loss: -1.18023595
+02/25/2022 10:02:48 - INFO - __main__ - global_steps 40400 - lr: 0.00002710  loss: -1.26434681
+02/25/2022 10:03:07 - INFO - __main__ - global_steps 40600 - lr: 0.00002707  loss: -1.20113486
+02/25/2022 10:03:27 - INFO - __main__ - global_steps 40800 - lr: 0.00002704  loss: -1.21353473
+02/25/2022 10:03:46 - INFO - __main__ - global_steps 41000 - lr: 0.00002701  loss: -1.24076197
+02/25/2022 10:04:06 - INFO - __main__ - global_steps 41200 - lr: 0.00002698  loss: -1.23311278
+02/25/2022 10:04:26 - INFO - __main__ - global_steps 41400 - lr: 0.00002695  loss: -1.15252260
+02/25/2022 10:04:45 - INFO - __main__ - global_steps 41600 - lr: 0.00002692  loss: -1.25889505
+02/25/2022 10:05:05 - INFO - __main__ - global_steps 41800 - lr: 0.00002689  loss: -1.22741444
+02/25/2022 10:05:25 - INFO - __main__ - global_steps 42000 - lr: 0.00002685  loss: -1.13993576
+02/25/2022 10:05:44 - INFO - __main__ - global_steps 42200 - lr: 0.00002682  loss: -1.30723351
+02/25/2022 10:06:04 - INFO - __main__ - global_steps 42400 - lr: 0.00002679  loss: -1.21842864
+02/25/2022 10:06:24 - INFO - __main__ - global_steps 42600 - lr: 0.00002676  loss: -1.19890116
+02/25/2022 10:06:43 - INFO - __main__ - global_steps 42800 - lr: 0.00002673  loss: -1.20048361
+02/25/2022 10:07:03 - INFO - __main__ - global_steps 43000 - lr: 0.00002670  loss: -1.22766276
+02/25/2022 10:07:22 - INFO - __main__ - global_steps 43200 - lr: 0.00002667  loss: -1.28812649
+02/25/2022 10:07:24 - INFO - __main__ - ********** Evaluate Step 43216 **********
+02/25/2022 10:07:24 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 10:08:36 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 10:08:36 - INFO - __main__ - f1 = 0.8065756541524464
+02/25/2022 10:08:36 - INFO - __main__ - precision = 0.8372065561381139
+02/25/2022 10:08:36 - INFO - __main__ - recall = 0.7781070284033544
+02/25/2022 10:08:36 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 10:08:36 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 10:08:37 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-21608-spo-f1-0.7985907222548448
+02/25/2022 10:08:37 - INFO - __main__ - *************************************
+02/25/2022 10:08:55 - INFO - __main__ - global_steps 43400 - lr: 0.00002664  loss: -1.56905166
+02/25/2022 10:09:14 - INFO - __main__ - global_steps 43600 - lr: 0.00002661  loss: -1.44936402
+02/25/2022 10:09:34 - INFO - __main__ - global_steps 43800 - lr: 0.00002658  loss: -1.37028862
+02/25/2022 10:09:53 - INFO - __main__ - global_steps 44000 - lr: 0.00002655  loss: -1.42092148
+02/25/2022 10:10:13 - INFO - __main__ - global_steps 44200 - lr: 0.00002651  loss: -1.51705998
+02/25/2022 10:10:33 - INFO - __main__ - global_steps 44400 - lr: 0.00002648  loss: -1.39201904
+02/25/2022 10:10:52 - INFO - __main__ - global_steps 44600 - lr: 0.00002645  loss: -1.43421940
+02/25/2022 10:11:12 - INFO - __main__ - global_steps 44800 - lr: 0.00002642  loss: -1.44871581
+02/25/2022 10:11:32 - INFO - __main__ - global_steps 45000 - lr: 0.00002639  loss: -1.38070726
+02/25/2022 10:11:51 - INFO - __main__ - global_steps 45200 - lr: 0.00002636  loss: -1.35769102
+02/25/2022 10:12:11 - INFO - __main__ - global_steps 45400 - lr: 0.00002633  loss: -1.49422574
+02/25/2022 10:12:30 - INFO - __main__ - global_steps 45600 - lr: 0.00002630  loss: -1.45875918
+02/25/2022 10:12:50 - INFO - __main__ - global_steps 45800 - lr: 0.00002627  loss: -1.38696227
+02/25/2022 10:13:10 - INFO - __main__ - global_steps 46000 - lr: 0.00002624  loss: -1.40741689
+02/25/2022 10:13:29 - INFO - __main__ - global_steps 46200 - lr: 0.00002621  loss: -1.49844716
+02/25/2022 10:13:48 - INFO - __main__ - global_steps 46400 - lr: 0.00002618  loss: -1.51113529
+02/25/2022 10:14:08 - INFO - __main__ - global_steps 46600 - lr: 0.00002614  loss: -1.40787669
+02/25/2022 10:14:27 - INFO - __main__ - global_steps 46800 - lr: 0.00002611  loss: -1.46093142
+02/25/2022 10:14:47 - INFO - __main__ - global_steps 47000 - lr: 0.00002608  loss: -1.38074889
+02/25/2022 10:15:07 - INFO - __main__ - global_steps 47200 - lr: 0.00002605  loss: -1.42523044
+02/25/2022 10:15:26 - INFO - __main__ - global_steps 47400 - lr: 0.00002602  loss: -1.31937809
+02/25/2022 10:15:46 - INFO - __main__ - global_steps 47600 - lr: 0.00002599  loss: -1.47436637
+02/25/2022 10:16:05 - INFO - __main__ - global_steps 47800 - lr: 0.00002596  loss: -1.47998436
+02/25/2022 10:16:25 - INFO - __main__ - global_steps 48000 - lr: 0.00002593  loss: -1.45033686
+02/25/2022 10:16:44 - INFO - __main__ - global_steps 48200 - lr: 0.00002590  loss: -1.38133918
+02/25/2022 10:17:04 - INFO - __main__ - global_steps 48400 - lr: 0.00002587  loss: -1.42672949
+02/25/2022 10:17:24 - INFO - __main__ - global_steps 48600 - lr: 0.00002584  loss: -1.40182663
+02/25/2022 10:17:43 - INFO - __main__ - global_steps 48800 - lr: 0.00002581  loss: -1.43830513
+02/25/2022 10:18:03 - INFO - __main__ - global_steps 49000 - lr: 0.00002577  loss: -1.46729265
+02/25/2022 10:18:23 - INFO - __main__ - global_steps 49200 - lr: 0.00002574  loss: -1.45462317
+02/25/2022 10:18:43 - INFO - __main__ - global_steps 49400 - lr: 0.00002571  loss: -1.41985814
+02/25/2022 10:19:02 - INFO - __main__ - global_steps 49600 - lr: 0.00002568  loss: -1.36022815
+02/25/2022 10:19:22 - INFO - __main__ - global_steps 49800 - lr: 0.00002565  loss: -1.35713654
+02/25/2022 10:19:41 - INFO - __main__ - global_steps 50000 - lr: 0.00002562  loss: -1.33515950
+02/25/2022 10:20:01 - INFO - __main__ - global_steps 50200 - lr: 0.00002559  loss: -1.30452133
+02/25/2022 10:20:21 - INFO - __main__ - global_steps 50400 - lr: 0.00002556  loss: -1.45782316
+02/25/2022 10:20:40 - INFO - __main__ - global_steps 50600 - lr: 0.00002553  loss: -1.37913910
+02/25/2022 10:21:00 - INFO - __main__ - global_steps 50800 - lr: 0.00002550  loss: -1.41234454
+02/25/2022 10:21:20 - INFO - __main__ - global_steps 51000 - lr: 0.00002547  loss: -1.36429294
+02/25/2022 10:21:39 - INFO - __main__ - global_steps 51200 - lr: 0.00002544  loss: -1.33551341
+02/25/2022 10:21:59 - INFO - __main__ - global_steps 51400 - lr: 0.00002540  loss: -1.30616897
+02/25/2022 10:22:19 - INFO - __main__ - global_steps 51600 - lr: 0.00002537  loss: -1.39981303
+02/25/2022 10:22:38 - INFO - __main__ - global_steps 51800 - lr: 0.00002534  loss: -1.38042693
+02/25/2022 10:22:58 - INFO - __main__ - global_steps 52000 - lr: 0.00002531  loss: -1.50510312
+02/25/2022 10:23:18 - INFO - __main__ - global_steps 52200 - lr: 0.00002528  loss: -1.39559683
+02/25/2022 10:23:37 - INFO - __main__ - global_steps 52400 - lr: 0.00002525  loss: -1.28585896
+02/25/2022 10:23:57 - INFO - __main__ - global_steps 52600 - lr: 0.00002522  loss: -1.31562326
+02/25/2022 10:24:17 - INFO - __main__ - global_steps 52800 - lr: 0.00002519  loss: -1.41937716
+02/25/2022 10:24:37 - INFO - __main__ - global_steps 53000 - lr: 0.00002516  loss: -1.41030290
+02/25/2022 10:24:59 - INFO - __main__ - global_steps 53200 - lr: 0.00002513  loss: -1.47994692
+02/25/2022 10:25:22 - INFO - __main__ - global_steps 53400 - lr: 0.00002510  loss: -1.39624409
+02/25/2022 10:25:45 - INFO - __main__ - global_steps 53600 - lr: 0.00002506  loss: -1.42776283
+02/25/2022 10:26:06 - INFO - __main__ - global_steps 53800 - lr: 0.00002503  loss: -1.54830602
+02/25/2022 10:26:26 - INFO - __main__ - global_steps 54000 - lr: 0.00002500  loss: -1.45683423
+02/25/2022 10:26:28 - INFO - __main__ - ********** Evaluate Step 54020 **********
+02/25/2022 10:26:28 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 10:27:42 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 10:27:42 - INFO - __main__ - f1 = 0.8198087178424598
+02/25/2022 10:27:42 - INFO - __main__ - precision = 0.8146470447994109
+02/25/2022 10:27:42 - INFO - __main__ - recall = 0.8250362175688137
+02/25/2022 10:27:42 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 10:27:42 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 10:27:43 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-43216-spo-f1-0.8065756541524464
+02/25/2022 10:27:43 - INFO - __main__ - *************************************
+02/25/2022 10:28:01 - INFO - __main__ - global_steps 54200 - lr: 0.00002497  loss: -1.63064465
+02/25/2022 10:28:21 - INFO - __main__ - global_steps 54400 - lr: 0.00002494  loss: -1.54934218
+02/25/2022 10:28:41 - INFO - __main__ - global_steps 54600 - lr: 0.00002491  loss: -1.64017915
+02/25/2022 10:29:05 - INFO - __main__ - global_steps 54800 - lr: 0.00002488  loss: -1.64119857
+02/25/2022 10:29:27 - INFO - __main__ - global_steps 55000 - lr: 0.00002485  loss: -1.55323678
+02/25/2022 10:29:49 - INFO - __main__ - global_steps 55200 - lr: 0.00002482  loss: -1.59639128
+02/25/2022 10:30:08 - INFO - __main__ - global_steps 55400 - lr: 0.00002479  loss: -1.61265062
+02/25/2022 10:30:28 - INFO - __main__ - global_steps 55600 - lr: 0.00002476  loss: -1.60010637
+02/25/2022 10:30:48 - INFO - __main__ - global_steps 55800 - lr: 0.00002473  loss: -1.54415742
+02/25/2022 10:31:09 - INFO - __main__ - global_steps 56000 - lr: 0.00002469  loss: -1.66765041
+02/25/2022 10:31:28 - INFO - __main__ - global_steps 56200 - lr: 0.00002466  loss: -1.58861772
+02/25/2022 10:31:48 - INFO - __main__ - global_steps 56400 - lr: 0.00002463  loss: -1.56164408
+02/25/2022 10:32:08 - INFO - __main__ - global_steps 56600 - lr: 0.00002460  loss: -1.63540038
+02/25/2022 10:32:28 - INFO - __main__ - global_steps 56800 - lr: 0.00002457  loss: -1.69220155
+02/25/2022 10:32:47 - INFO - __main__ - global_steps 57000 - lr: 0.00002454  loss: -1.57397203
+02/25/2022 10:33:07 - INFO - __main__ - global_steps 57200 - lr: 0.00002451  loss: -1.60682459
+02/25/2022 10:33:27 - INFO - __main__ - global_steps 57400 - lr: 0.00002448  loss: -1.66868691
+02/25/2022 10:33:47 - INFO - __main__ - global_steps 57600 - lr: 0.00002445  loss: -1.53818650
+02/25/2022 10:34:07 - INFO - __main__ - global_steps 57800 - lr: 0.00002442  loss: -1.41131287
+02/25/2022 10:34:27 - INFO - __main__ - global_steps 58000 - lr: 0.00002439  loss: -1.57742950
+02/25/2022 10:34:46 - INFO - __main__ - global_steps 58200 - lr: 0.00002436  loss: -1.55022171
+02/25/2022 10:35:06 - INFO - __main__ - global_steps 58400 - lr: 0.00002432  loss: -1.74626147
+02/25/2022 10:35:26 - INFO - __main__ - global_steps 58600 - lr: 0.00002429  loss: -1.53434942
+02/25/2022 10:35:46 - INFO - __main__ - global_steps 58800 - lr: 0.00002426  loss: -1.51442787
+02/25/2022 10:36:06 - INFO - __main__ - global_steps 59000 - lr: 0.00002423  loss: -1.52644445
+02/25/2022 10:36:26 - INFO - __main__ - global_steps 59200 - lr: 0.00002420  loss: -1.55731907
+02/25/2022 10:36:45 - INFO - __main__ - global_steps 59400 - lr: 0.00002417  loss: -1.53965514
+02/25/2022 10:37:05 - INFO - __main__ - global_steps 59600 - lr: 0.00002414  loss: -1.53456100
+02/25/2022 10:37:24 - INFO - __main__ - global_steps 59800 - lr: 0.00002411  loss: -1.46739241
+02/25/2022 10:37:44 - INFO - __main__ - global_steps 60000 - lr: 0.00002408  loss: -1.50941401
+02/25/2022 10:38:04 - INFO - __main__ - global_steps 60200 - lr: 0.00002405  loss: -1.51493713
+02/25/2022 10:38:24 - INFO - __main__ - global_steps 60400 - lr: 0.00002402  loss: -1.53803429
+02/25/2022 10:38:43 - INFO - __main__ - global_steps 60600 - lr: 0.00002398  loss: -1.61184370
+02/25/2022 10:39:03 - INFO - __main__ - global_steps 60800 - lr: 0.00002395  loss: -1.53681385
+02/25/2022 10:39:23 - INFO - __main__ - global_steps 61000 - lr: 0.00002392  loss: -1.57583069
+02/25/2022 10:39:43 - INFO - __main__ - global_steps 61200 - lr: 0.00002389  loss: -1.56294197
+02/25/2022 10:40:03 - INFO - __main__ - global_steps 61400 - lr: 0.00002386  loss: -1.54437141
+02/25/2022 10:40:22 - INFO - __main__ - global_steps 61600 - lr: 0.00002383  loss: -1.57684246
+02/25/2022 10:40:42 - INFO - __main__ - global_steps 61800 - lr: 0.00002380  loss: -1.59531531
+02/25/2022 10:41:02 - INFO - __main__ - global_steps 62000 - lr: 0.00002377  loss: -1.56222436
+02/25/2022 10:41:21 - INFO - __main__ - global_steps 62200 - lr: 0.00002374  loss: -1.47547376
+02/25/2022 10:41:41 - INFO - __main__ - global_steps 62400 - lr: 0.00002371  loss: -1.52827713
+02/25/2022 10:42:01 - INFO - __main__ - global_steps 62600 - lr: 0.00002368  loss: -1.53767686
+02/25/2022 10:42:20 - INFO - __main__ - global_steps 62800 - lr: 0.00002365  loss: -1.66364242
+02/25/2022 10:42:40 - INFO - __main__ - global_steps 63000 - lr: 0.00002361  loss: -1.57677973
+02/25/2022 10:42:59 - INFO - __main__ - global_steps 63200 - lr: 0.00002358  loss: -1.56028104
+02/25/2022 10:43:19 - INFO - __main__ - global_steps 63400 - lr: 0.00002355  loss: -1.66233256
+02/25/2022 10:43:38 - INFO - __main__ - global_steps 63600 - lr: 0.00002352  loss: -1.53156376
+02/25/2022 10:43:58 - INFO - __main__ - global_steps 63800 - lr: 0.00002349  loss: -1.64058891
+02/25/2022 10:44:17 - INFO - __main__ - global_steps 64000 - lr: 0.00002346  loss: -1.54929103
+02/25/2022 10:44:37 - INFO - __main__ - global_steps 64200 - lr: 0.00002343  loss: -1.49987593
+02/25/2022 10:44:57 - INFO - __main__ - global_steps 64400 - lr: 0.00002340  loss: -1.54939282
+02/25/2022 10:45:16 - INFO - __main__ - global_steps 64600 - lr: 0.00002337  loss: -1.50386794
+02/25/2022 10:45:36 - INFO - __main__ - global_steps 64800 - lr: 0.00002334  loss: -1.65051560
+02/25/2022 10:45:38 - INFO - __main__ - ********** Evaluate Step 64824 **********
+02/25/2022 10:45:38 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 10:46:52 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 10:46:52 - INFO - __main__ - f1 = 0.8194783073377647
+02/25/2022 10:46:52 - INFO - __main__ - precision = 0.8314469671297869
+02/25/2022 10:46:52 - INFO - __main__ - recall = 0.8078493349137368
+02/25/2022 10:46:52 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 10:46:52 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 10:46:52 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-32412-spo-f1-0.8119146634209018
+02/25/2022 10:46:52 - INFO - __main__ - *************************************
+02/25/2022 10:47:10 - INFO - __main__ - global_steps 65000 - lr: 0.00002331  loss: -1.69405591
+02/25/2022 10:47:30 - INFO - __main__ - global_steps 65200 - lr: 0.00002328  loss: -1.75798465
+02/25/2022 10:47:49 - INFO - __main__ - global_steps 65400 - lr: 0.00002324  loss: -1.78051298
+02/25/2022 10:48:09 - INFO - __main__ - global_steps 65600 - lr: 0.00002321  loss: -1.69953844
+02/25/2022 10:48:29 - INFO - __main__ - global_steps 65800 - lr: 0.00002318  loss: -1.74960151
+02/25/2022 10:48:48 - INFO - __main__ - global_steps 66000 - lr: 0.00002315  loss: -1.67810893
+02/25/2022 10:49:07 - INFO - __main__ - global_steps 66200 - lr: 0.00002312  loss: -1.71440172
+02/25/2022 10:49:27 - INFO - __main__ - global_steps 66400 - lr: 0.00002309  loss: -1.73583376
+02/25/2022 10:49:47 - INFO - __main__ - global_steps 66600 - lr: 0.00002306  loss: -1.74712028
+02/25/2022 10:50:07 - INFO - __main__ - global_steps 66800 - lr: 0.00002303  loss: -1.65771532
+02/25/2022 10:50:27 - INFO - __main__ - global_steps 67000 - lr: 0.00002300  loss: -1.75715546
+02/25/2022 10:50:47 - INFO - __main__ - global_steps 67200 - lr: 0.00002297  loss: -1.71062399
+02/25/2022 10:51:07 - INFO - __main__ - global_steps 67400 - lr: 0.00002294  loss: -1.69451497
+02/25/2022 10:51:26 - INFO - __main__ - global_steps 67600 - lr: 0.00002291  loss: -1.73810876
+02/25/2022 10:51:46 - INFO - __main__ - global_steps 67800 - lr: 0.00002287  loss: -1.72098347
+02/25/2022 10:52:05 - INFO - __main__ - global_steps 68000 - lr: 0.00002284  loss: -1.65771484
+02/25/2022 10:52:24 - INFO - __main__ - global_steps 68200 - lr: 0.00002281  loss: -1.74275346
+02/25/2022 10:52:44 - INFO - __main__ - global_steps 68400 - lr: 0.00002278  loss: -1.75315868
+02/25/2022 10:53:03 - INFO - __main__ - global_steps 68600 - lr: 0.00002275  loss: -1.77495877
+02/25/2022 10:53:23 - INFO - __main__ - global_steps 68800 - lr: 0.00002272  loss: -1.77840784
+02/25/2022 10:53:43 - INFO - __main__ - global_steps 69000 - lr: 0.00002269  loss: -1.82562150
+02/25/2022 10:54:02 - INFO - __main__ - global_steps 69200 - lr: 0.00002266  loss: -1.61905535
+02/25/2022 10:54:22 - INFO - __main__ - global_steps 69400 - lr: 0.00002263  loss: -1.75701606
+02/25/2022 10:54:42 - INFO - __main__ - global_steps 69600 - lr: 0.00002260  loss: -1.67973789
+02/25/2022 10:55:01 - INFO - __main__ - global_steps 69800 - lr: 0.00002257  loss: -1.70265403
+02/25/2022 10:55:21 - INFO - __main__ - global_steps 70000 - lr: 0.00002253  loss: -1.65731286
+02/25/2022 10:55:40 - INFO - __main__ - global_steps 70200 - lr: 0.00002250  loss: -1.76277018
+02/25/2022 10:56:00 - INFO - __main__ - global_steps 70400 - lr: 0.00002247  loss: -1.80208586
+02/25/2022 10:56:19 - INFO - __main__ - global_steps 70600 - lr: 0.00002244  loss: -1.74520446
+02/25/2022 10:56:39 - INFO - __main__ - global_steps 70800 - lr: 0.00002241  loss: -1.77062863
+02/25/2022 10:56:58 - INFO - __main__ - global_steps 71000 - lr: 0.00002238  loss: -1.77242852
+02/25/2022 10:57:18 - INFO - __main__ - global_steps 71200 - lr: 0.00002235  loss: -1.61827691
+02/25/2022 10:57:37 - INFO - __main__ - global_steps 71400 - lr: 0.00002232  loss: -1.73083158
+02/25/2022 10:57:57 - INFO - __main__ - global_steps 71600 - lr: 0.00002229  loss: -1.70134003
+02/25/2022 10:58:17 - INFO - __main__ - global_steps 71800 - lr: 0.00002226  loss: -1.68061958
+02/25/2022 10:58:37 - INFO - __main__ - global_steps 72000 - lr: 0.00002223  loss: -1.67724278
+02/25/2022 10:58:56 - INFO - __main__ - global_steps 72200 - lr: 0.00002220  loss: -1.80880641
+02/25/2022 10:59:16 - INFO - __main__ - global_steps 72400 - lr: 0.00002216  loss: -1.71242662
+02/25/2022 10:59:36 - INFO - __main__ - global_steps 72600 - lr: 0.00002213  loss: -1.78286168
+02/25/2022 10:59:55 - INFO - __main__ - global_steps 72800 - lr: 0.00002210  loss: -1.60251171
+02/25/2022 11:00:15 - INFO - __main__ - global_steps 73000 - lr: 0.00002207  loss: -1.71420434
+02/25/2022 11:00:34 - INFO - __main__ - global_steps 73200 - lr: 0.00002204  loss: -1.68120359
+02/25/2022 11:00:54 - INFO - __main__ - global_steps 73400 - lr: 0.00002201  loss: -1.72265731
+02/25/2022 11:01:13 - INFO - __main__ - global_steps 73600 - lr: 0.00002198  loss: -1.67424594
+02/25/2022 11:01:33 - INFO - __main__ - global_steps 73800 - lr: 0.00002195  loss: -1.64762012
+02/25/2022 11:01:52 - INFO - __main__ - global_steps 74000 - lr: 0.00002192  loss: -1.74296741
+02/25/2022 11:02:12 - INFO - __main__ - global_steps 74200 - lr: 0.00002189  loss: -1.63020213
+02/25/2022 11:02:31 - INFO - __main__ - global_steps 74400 - lr: 0.00002186  loss: -1.75239130
+02/25/2022 11:02:51 - INFO - __main__ - global_steps 74600 - lr: 0.00002183  loss: -1.72481488
+02/25/2022 11:03:10 - INFO - __main__ - global_steps 74800 - lr: 0.00002179  loss: -1.72384417
+02/25/2022 11:03:30 - INFO - __main__ - global_steps 75000 - lr: 0.00002176  loss: -1.64907811
+02/25/2022 11:03:49 - INFO - __main__ - global_steps 75200 - lr: 0.00002173  loss: -1.66120249
+02/25/2022 11:04:09 - INFO - __main__ - global_steps 75400 - lr: 0.00002170  loss: -1.69809627
+02/25/2022 11:04:29 - INFO - __main__ - global_steps 75600 - lr: 0.00002167  loss: -1.76566830
+02/25/2022 11:04:31 - INFO - __main__ - ********** Evaluate Step 75628 **********
+02/25/2022 11:04:31 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 11:05:44 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 11:05:44 - INFO - __main__ - f1 = 0.8183383267003537
+02/25/2022 11:05:44 - INFO - __main__ - precision = 0.8338497288923319
+02/25/2022 11:05:44 - INFO - __main__ - recall = 0.8033934764476057
+02/25/2022 11:05:44 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 11:05:44 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 11:05:45 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-75628-spo-f1-0.8183383267003537
+02/25/2022 11:05:45 - INFO - __main__ - *************************************
+02/25/2022 11:06:02 - INFO - __main__ - global_steps 75800 - lr: 0.00002164  loss: -1.87395427
+02/25/2022 11:06:21 - INFO - __main__ - global_steps 76000 - lr: 0.00002161  loss: -1.88936886
+02/25/2022 11:06:41 - INFO - __main__ - global_steps 76200 - lr: 0.00002158  loss: -1.98360503
+02/25/2022 11:07:00 - INFO - __main__ - global_steps 76400 - lr: 0.00002155  loss: -1.87660638
+02/25/2022 11:07:20 - INFO - __main__ - global_steps 76600 - lr: 0.00002152  loss: -1.81471940
+02/25/2022 11:07:40 - INFO - __main__ - global_steps 76800 - lr: 0.00002149  loss: -1.88756539
+02/25/2022 11:07:59 - INFO - __main__ - global_steps 77000 - lr: 0.00002146  loss: -1.91154316
+02/25/2022 11:08:18 - INFO - __main__ - global_steps 77200 - lr: 0.00002142  loss: -1.87334116
+02/25/2022 11:08:38 - INFO - __main__ - global_steps 77400 - lr: 0.00002139  loss: -1.87830359
+02/25/2022 11:08:58 - INFO - __main__ - global_steps 77600 - lr: 0.00002136  loss: -1.77529179
+02/25/2022 11:09:17 - INFO - __main__ - global_steps 77800 - lr: 0.00002133  loss: -1.90905833
+02/25/2022 11:09:37 - INFO - __main__ - global_steps 78000 - lr: 0.00002130  loss: -1.87397877
+02/25/2022 11:09:56 - INFO - __main__ - global_steps 78200 - lr: 0.00002127  loss: -1.85178801
+02/25/2022 11:10:16 - INFO - __main__ - global_steps 78400 - lr: 0.00002124  loss: -1.95740398
+02/25/2022 11:10:36 - INFO - __main__ - global_steps 78600 - lr: 0.00002121  loss: -1.83080418
+02/25/2022 11:10:55 - INFO - __main__ - global_steps 78800 - lr: 0.00002118  loss: -1.83018507
+02/25/2022 11:11:14 - INFO - __main__ - global_steps 79000 - lr: 0.00002115  loss: -1.89046320
+02/25/2022 11:11:34 - INFO - __main__ - global_steps 79200 - lr: 0.00002112  loss: -1.85161046
+02/25/2022 11:11:53 - INFO - __main__ - global_steps 79400 - lr: 0.00002108  loss: -1.81690736
+02/25/2022 11:12:13 - INFO - __main__ - global_steps 79600 - lr: 0.00002105  loss: -1.82715792
+02/25/2022 11:12:32 - INFO - __main__ - global_steps 79800 - lr: 0.00002102  loss: -1.80964586
+02/25/2022 11:12:52 - INFO - __main__ - global_steps 80000 - lr: 0.00002099  loss: -1.77491685
+02/25/2022 11:13:11 - INFO - __main__ - global_steps 80200 - lr: 0.00002096  loss: -1.86521567
+02/25/2022 11:13:30 - INFO - __main__ - global_steps 80400 - lr: 0.00002093  loss: -1.81892632
+02/25/2022 11:13:50 - INFO - __main__ - global_steps 80600 - lr: 0.00002090  loss: -1.85178301
+02/25/2022 11:14:10 - INFO - __main__ - global_steps 80800 - lr: 0.00002087  loss: -1.84214374
+02/25/2022 11:14:29 - INFO - __main__ - global_steps 81000 - lr: 0.00002084  loss: -1.89078575
+02/25/2022 11:14:49 - INFO - __main__ - global_steps 81200 - lr: 0.00002081  loss: -1.79010329
+02/25/2022 11:15:08 - INFO - __main__ - global_steps 81400 - lr: 0.00002078  loss: -1.76778629
+02/25/2022 11:15:28 - INFO - __main__ - global_steps 81600 - lr: 0.00002075  loss: -1.85406607
+02/25/2022 11:15:47 - INFO - __main__ - global_steps 81800 - lr: 0.00002071  loss: -1.89417409
+02/25/2022 11:16:06 - INFO - __main__ - global_steps 82000 - lr: 0.00002068  loss: -1.80124871
+02/25/2022 11:16:26 - INFO - __main__ - global_steps 82200 - lr: 0.00002065  loss: -1.92031079
+02/25/2022 11:16:45 - INFO - __main__ - global_steps 82400 - lr: 0.00002062  loss: -1.86874903
+02/25/2022 11:17:04 - INFO - __main__ - global_steps 82600 - lr: 0.00002059  loss: -1.94721291
+02/25/2022 11:17:23 - INFO - __main__ - global_steps 82800 - lr: 0.00002056  loss: -1.80363272
+02/25/2022 11:17:43 - INFO - __main__ - global_steps 83000 - lr: 0.00002053  loss: -1.77577898
+02/25/2022 11:18:02 - INFO - __main__ - global_steps 83200 - lr: 0.00002050  loss: -1.80454184
+02/25/2022 11:18:21 - INFO - __main__ - global_steps 83400 - lr: 0.00002047  loss: -1.87018111
+02/25/2022 11:18:40 - INFO - __main__ - global_steps 83600 - lr: 0.00002044  loss: -1.77140081
+02/25/2022 11:19:00 - INFO - __main__ - global_steps 83800 - lr: 0.00002041  loss: -1.90048123
+02/25/2022 11:19:20 - INFO - __main__ - global_steps 84000 - lr: 0.00002038  loss: -1.80084918
+02/25/2022 11:19:39 - INFO - __main__ - global_steps 84200 - lr: 0.00002034  loss: -1.86791010
+02/25/2022 11:19:59 - INFO - __main__ - global_steps 84400 - lr: 0.00002031  loss: -1.86091624
+02/25/2022 11:20:18 - INFO - __main__ - global_steps 84600 - lr: 0.00002028  loss: -1.81617815
+02/25/2022 11:20:38 - INFO - __main__ - global_steps 84800 - lr: 0.00002025  loss: -1.72795997
+02/25/2022 11:20:57 - INFO - __main__ - global_steps 85000 - lr: 0.00002022  loss: -1.80859443
+02/25/2022 11:21:17 - INFO - __main__ - global_steps 85200 - lr: 0.00002019  loss: -1.85879413
+02/25/2022 11:21:36 - INFO - __main__ - global_steps 85400 - lr: 0.00002016  loss: -1.78411797
+02/25/2022 11:21:56 - INFO - __main__ - global_steps 85600 - lr: 0.00002013  loss: -1.81646956
+02/25/2022 11:22:15 - INFO - __main__ - global_steps 85800 - lr: 0.00002010  loss: -1.88164293
+02/25/2022 11:22:35 - INFO - __main__ - global_steps 86000 - lr: 0.00002007  loss: -1.81361466
+02/25/2022 11:22:55 - INFO - __main__ - global_steps 86200 - lr: 0.00002004  loss: -1.85138260
+02/25/2022 11:23:15 - INFO - __main__ - global_steps 86400 - lr: 0.00002000  loss: -1.87042618
+02/25/2022 11:23:18 - INFO - __main__ - ********** Evaluate Step 86432 **********
+02/25/2022 11:23:18 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 11:24:31 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 11:24:31 - INFO - __main__ - f1 = 0.8151810771081122
+02/25/2022 11:24:31 - INFO - __main__ - precision = 0.8273430082734304
+02/25/2022 11:24:31 - INFO - __main__ - recall = 0.8033715264059006
+02/25/2022 11:24:31 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 11:24:31 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 11:24:31 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-86432-spo-f1-0.8151810771081122
+02/25/2022 11:24:31 - INFO - __main__ - *************************************
+02/25/2022 11:24:48 - INFO - __main__ - global_steps 86600 - lr: 0.00001997  loss: -1.92929330
+02/25/2022 11:25:08 - INFO - __main__ - global_steps 86800 - lr: 0.00001994  loss: -1.97158352
+02/25/2022 11:25:27 - INFO - __main__ - global_steps 87000 - lr: 0.00001991  loss: -2.00489185
+02/25/2022 11:25:47 - INFO - __main__ - global_steps 87200 - lr: 0.00001988  loss: -2.01535731
+02/25/2022 11:26:06 - INFO - __main__ - global_steps 87400 - lr: 0.00001985  loss: -1.98237432
+02/25/2022 11:26:26 - INFO - __main__ - global_steps 87600 - lr: 0.00001982  loss: -2.03120818
+02/25/2022 11:26:46 - INFO - __main__ - global_steps 87800 - lr: 0.00001979  loss: -1.94401712
+02/25/2022 11:27:05 - INFO - __main__ - global_steps 88000 - lr: 0.00001976  loss: -2.09683707
+02/25/2022 11:27:25 - INFO - __main__ - global_steps 88200 - lr: 0.00001973  loss: -2.03493440
+02/25/2022 11:27:45 - INFO - __main__ - global_steps 88400 - lr: 0.00001970  loss: -2.03466877
+02/25/2022 11:28:04 - INFO - __main__ - global_steps 88600 - lr: 0.00001967  loss: -1.95982321
+02/25/2022 11:28:24 - INFO - __main__ - global_steps 88800 - lr: 0.00001963  loss: -1.99040005
+02/25/2022 11:28:43 - INFO - __main__ - global_steps 89000 - lr: 0.00001960  loss: -2.02429897
+02/25/2022 11:29:03 - INFO - __main__ - global_steps 89200 - lr: 0.00001957  loss: -1.93299011
+02/25/2022 11:29:22 - INFO - __main__ - global_steps 89400 - lr: 0.00001954  loss: -2.03827244
+02/25/2022 11:29:41 - INFO - __main__ - global_steps 89600 - lr: 0.00001951  loss: -1.94957506
+02/25/2022 11:30:01 - INFO - __main__ - global_steps 89800 - lr: 0.00001948  loss: -2.03284500
+02/25/2022 11:30:22 - INFO - __main__ - global_steps 90000 - lr: 0.00001945  loss: -2.01338651
+02/25/2022 11:30:42 - INFO - __main__ - global_steps 90200 - lr: 0.00001942  loss: -2.04045820
+02/25/2022 11:31:02 - INFO - __main__ - global_steps 90400 - lr: 0.00001939  loss: -2.04084598
+02/25/2022 11:31:22 - INFO - __main__ - global_steps 90600 - lr: 0.00001936  loss: -1.93508856
+02/25/2022 11:31:41 - INFO - __main__ - global_steps 90800 - lr: 0.00001933  loss: -2.06252955
+02/25/2022 11:32:01 - INFO - __main__ - global_steps 91000 - lr: 0.00001930  loss: -2.01281138
+02/25/2022 11:32:21 - INFO - __main__ - global_steps 91200 - lr: 0.00001926  loss: -1.88865532
+02/25/2022 11:32:41 - INFO - __main__ - global_steps 91400 - lr: 0.00001923  loss: -1.96723800
+02/25/2022 11:33:01 - INFO - __main__ - global_steps 91600 - lr: 0.00001920  loss: -1.93735578
+02/25/2022 11:33:21 - INFO - __main__ - global_steps 91800 - lr: 0.00001917  loss: -2.02574634
+02/25/2022 11:33:41 - INFO - __main__ - global_steps 92000 - lr: 0.00001914  loss: -1.89392520
+02/25/2022 11:34:01 - INFO - __main__ - global_steps 92200 - lr: 0.00001911  loss: -1.89501355
+02/25/2022 11:34:21 - INFO - __main__ - global_steps 92400 - lr: 0.00001908  loss: -1.97735300
+02/25/2022 11:34:42 - INFO - __main__ - global_steps 92600 - lr: 0.00001905  loss: -1.93355457
+02/25/2022 11:35:02 - INFO - __main__ - global_steps 92800 - lr: 0.00001902  loss: -1.91687187
+02/25/2022 11:35:21 - INFO - __main__ - global_steps 93000 - lr: 0.00001899  loss: -2.00858010
+02/25/2022 11:35:41 - INFO - __main__ - global_steps 93200 - lr: 0.00001896  loss: -1.95896258
+02/25/2022 11:36:01 - INFO - __main__ - global_steps 93400 - lr: 0.00001893  loss: -1.96277370
+02/25/2022 11:36:20 - INFO - __main__ - global_steps 93600 - lr: 0.00001889  loss: -1.98892302
+02/25/2022 11:36:40 - INFO - __main__ - global_steps 93800 - lr: 0.00001886  loss: -1.88683666
+02/25/2022 11:37:00 - INFO - __main__ - global_steps 94000 - lr: 0.00001883  loss: -1.90500018
+02/25/2022 11:37:19 - INFO - __main__ - global_steps 94200 - lr: 0.00001880  loss: -1.99894663
+02/25/2022 11:37:38 - INFO - __main__ - global_steps 94400 - lr: 0.00001877  loss: -1.92363725
+02/25/2022 11:37:58 - INFO - __main__ - global_steps 94600 - lr: 0.00001874  loss: -1.97044469
+02/25/2022 11:38:18 - INFO - __main__ - global_steps 94800 - lr: 0.00001871  loss: -1.87874919
+02/25/2022 11:38:38 - INFO - __main__ - global_steps 95000 - lr: 0.00001868  loss: -1.91629923
+02/25/2022 11:38:58 - INFO - __main__ - global_steps 95200 - lr: 0.00001865  loss: -1.90446503
+02/25/2022 11:39:18 - INFO - __main__ - global_steps 95400 - lr: 0.00001862  loss: -2.02679195
+02/25/2022 11:39:37 - INFO - __main__ - global_steps 95600 - lr: 0.00001859  loss: -1.97245282
+02/25/2022 11:39:57 - INFO - __main__ - global_steps 95800 - lr: 0.00001855  loss: -1.89618120
+02/25/2022 11:40:17 - INFO - __main__ - global_steps 96000 - lr: 0.00001852  loss: -1.95150251
+02/25/2022 11:40:36 - INFO - __main__ - global_steps 96200 - lr: 0.00001849  loss: -1.98216678
+02/25/2022 11:40:56 - INFO - __main__ - global_steps 96400 - lr: 0.00001846  loss: -1.98566497
+02/25/2022 11:41:16 - INFO - __main__ - global_steps 96600 - lr: 0.00001843  loss: -1.88372643
+02/25/2022 11:41:43 - INFO - __main__ - global_steps 96800 - lr: 0.00001840  loss: -2.02111452
+02/25/2022 11:42:13 - INFO - __main__ - global_steps 97000 - lr: 0.00001837  loss: -1.96015359
+02/25/2022 11:42:42 - INFO - __main__ - global_steps 97200 - lr: 0.00001834  loss: -1.86689050
+02/25/2022 11:42:48 - INFO - __main__ - ********** Evaluate Step 97236 **********
+02/25/2022 11:42:48 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 11:44:20 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 11:44:20 - INFO - __main__ - f1 = 0.8157761672004049
+02/25/2022 11:44:20 - INFO - __main__ - precision = 0.8356930727260173
+02/25/2022 11:44:20 - INFO - __main__ - recall = 0.7967865138943768
+02/25/2022 11:44:20 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 11:44:20 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 11:44:21 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-97236-spo-f1-0.8157761672004049
+02/25/2022 11:44:21 - INFO - __main__ - *************************************
+02/25/2022 11:44:37 - INFO - __main__ - global_steps 97400 - lr: 0.00001831  loss: -2.14871177
+02/25/2022 11:44:57 - INFO - __main__ - global_steps 97600 - lr: 0.00001828  loss: -2.05947875
+02/25/2022 11:45:17 - INFO - __main__ - global_steps 97800 - lr: 0.00001825  loss: -2.11515061
+02/25/2022 11:45:37 - INFO - __main__ - global_steps 98000 - lr: 0.00001822  loss: -2.15053782
+02/25/2022 11:45:56 - INFO - __main__ - global_steps 98200 - lr: 0.00001818  loss: -2.12339291
+02/25/2022 11:46:16 - INFO - __main__ - global_steps 98400 - lr: 0.00001815  loss: -2.04817394
+02/25/2022 11:46:36 - INFO - __main__ - global_steps 98600 - lr: 0.00001812  loss: -2.03621785
+02/25/2022 11:46:56 - INFO - __main__ - global_steps 98800 - lr: 0.00001809  loss: -2.16912257
+02/25/2022 11:47:15 - INFO - __main__ - global_steps 99000 - lr: 0.00001806  loss: -2.12995194
+02/25/2022 11:47:35 - INFO - __main__ - global_steps 99200 - lr: 0.00001803  loss: -2.06554383
+02/25/2022 11:47:55 - INFO - __main__ - global_steps 99400 - lr: 0.00001800  loss: -2.10334205
+02/25/2022 11:48:15 - INFO - __main__ - global_steps 99600 - lr: 0.00001797  loss: -2.02558443
+02/25/2022 11:48:35 - INFO - __main__ - global_steps 99800 - lr: 0.00001794  loss: -2.11025657
+02/25/2022 11:48:54 - INFO - __main__ - global_steps 100000 - lr: 0.00001791  loss: -2.05302733
+02/25/2022 11:49:13 - INFO - __main__ - global_steps 100200 - lr: 0.00001788  loss: -2.05823836
+02/25/2022 11:49:33 - INFO - __main__ - global_steps 100400 - lr: 0.00001785  loss: -2.08201521
+02/25/2022 11:49:53 - INFO - __main__ - global_steps 100600 - lr: 0.00001781  loss: -2.08558168
+02/25/2022 11:50:13 - INFO - __main__ - global_steps 100800 - lr: 0.00001778  loss: -2.01650080
+02/25/2022 11:50:33 - INFO - __main__ - global_steps 101000 - lr: 0.00001775  loss: -1.95291057
+02/25/2022 11:50:53 - INFO - __main__ - global_steps 101200 - lr: 0.00001772  loss: -2.03014082
+02/25/2022 11:51:13 - INFO - __main__ - global_steps 101400 - lr: 0.00001769  loss: -2.16463983
+02/25/2022 11:51:33 - INFO - __main__ - global_steps 101600 - lr: 0.00001766  loss: -2.15734162
+02/25/2022 11:51:52 - INFO - __main__ - global_steps 101800 - lr: 0.00001763  loss: -2.09672359
+02/25/2022 11:52:12 - INFO - __main__ - global_steps 102000 - lr: 0.00001760  loss: -2.07813201
+02/25/2022 11:52:32 - INFO - __main__ - global_steps 102200 - lr: 0.00001757  loss: -2.15033819
+02/25/2022 11:52:51 - INFO - __main__ - global_steps 102400 - lr: 0.00001754  loss: -2.13889283
+02/25/2022 11:53:11 - INFO - __main__ - global_steps 102600 - lr: 0.00001751  loss: -2.14369610
+02/25/2022 11:53:30 - INFO - __main__ - global_steps 102800 - lr: 0.00001748  loss: -2.07158203
+02/25/2022 11:53:50 - INFO - __main__ - global_steps 103000 - lr: 0.00001744  loss: -2.09972086
+02/25/2022 11:54:09 - INFO - __main__ - global_steps 103200 - lr: 0.00001741  loss: -2.03425870
+02/25/2022 11:54:29 - INFO - __main__ - global_steps 103400 - lr: 0.00001738  loss: -2.04897305
+02/25/2022 11:54:48 - INFO - __main__ - global_steps 103600 - lr: 0.00001735  loss: -2.07331589
+02/25/2022 11:55:08 - INFO - __main__ - global_steps 103800 - lr: 0.00001732  loss: -2.02052341
+02/25/2022 11:55:28 - INFO - __main__ - global_steps 104000 - lr: 0.00001729  loss: -2.08976773
+02/25/2022 11:55:47 - INFO - __main__ - global_steps 104200 - lr: 0.00001726  loss: -2.18900659
+02/25/2022 11:56:07 - INFO - __main__ - global_steps 104400 - lr: 0.00001723  loss: -2.08152069
+02/25/2022 11:56:26 - INFO - __main__ - global_steps 104600 - lr: 0.00001720  loss: -2.06450576
+02/25/2022 11:56:46 - INFO - __main__ - global_steps 104800 - lr: 0.00001717  loss: -2.11858085
+02/25/2022 11:57:05 - INFO - __main__ - global_steps 105000 - lr: 0.00001714  loss: -2.00790477
+02/25/2022 11:57:25 - INFO - __main__ - global_steps 105200 - lr: 0.00001710  loss: -2.13330787
+02/25/2022 11:57:44 - INFO - __main__ - global_steps 105400 - lr: 0.00001707  loss: -2.06335803
+02/25/2022 11:58:04 - INFO - __main__ - global_steps 105600 - lr: 0.00001704  loss: -1.98606064
+02/25/2022 11:58:24 - INFO - __main__ - global_steps 105800 - lr: 0.00001701  loss: -2.11833089
+02/25/2022 11:58:44 - INFO - __main__ - global_steps 106000 - lr: 0.00001698  loss: -2.00477231
+02/25/2022 11:59:04 - INFO - __main__ - global_steps 106200 - lr: 0.00001695  loss: -1.99206195
+02/25/2022 11:59:23 - INFO - __main__ - global_steps 106400 - lr: 0.00001692  loss: -2.11643703
+02/25/2022 11:59:42 - INFO - __main__ - global_steps 106600 - lr: 0.00001689  loss: -2.07378013
+02/25/2022 12:00:02 - INFO - __main__ - global_steps 106800 - lr: 0.00001686  loss: -2.12337164
+02/25/2022 12:00:21 - INFO - __main__ - global_steps 107000 - lr: 0.00001683  loss: -2.07227119
+02/25/2022 12:00:41 - INFO - __main__ - global_steps 107200 - lr: 0.00001680  loss: -2.18130185
+02/25/2022 12:01:00 - INFO - __main__ - global_steps 107400 - lr: 0.00001677  loss: -2.02716671
+02/25/2022 12:01:20 - INFO - __main__ - global_steps 107600 - lr: 0.00001673  loss: -2.00231126
+02/25/2022 12:01:39 - INFO - __main__ - global_steps 107800 - lr: 0.00001670  loss: -2.04868566
+02/25/2022 12:01:58 - INFO - __main__ - global_steps 108000 - lr: 0.00001667  loss: -1.95921238
+02/25/2022 12:02:02 - INFO - __main__ - ********** Evaluate Step 108040 **********
+02/25/2022 12:02:02 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 12:03:15 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:03:15 - INFO - __main__ - f1 = 0.8190857466112578
+02/25/2022 12:03:15 - INFO - __main__ - precision = 0.811966180657407
+02/25/2022 12:03:15 - INFO - __main__ - recall = 0.8263312700294134
+02/25/2022 12:03:15 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:03:15 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 12:03:16 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-108040-spo-f1-0.8190857466112578
+02/25/2022 12:03:16 - INFO - __main__ - *************************************
+02/25/2022 12:03:31 - INFO - __main__ - global_steps 108200 - lr: 0.00001664  loss: -2.19406495
+02/25/2022 12:03:51 - INFO - __main__ - global_steps 108400 - lr: 0.00001661  loss: -2.27037979
+02/25/2022 12:04:10 - INFO - __main__ - global_steps 108600 - lr: 0.00001658  loss: -2.21441100
+02/25/2022 12:04:30 - INFO - __main__ - global_steps 108800 - lr: 0.00001655  loss: -2.32412875
+02/25/2022 12:04:49 - INFO - __main__ - global_steps 109000 - lr: 0.00001652  loss: -2.21476702
+02/25/2022 12:05:08 - INFO - __main__ - global_steps 109200 - lr: 0.00001649  loss: -2.23471164
+02/25/2022 12:05:28 - INFO - __main__ - global_steps 109400 - lr: 0.00001646  loss: -2.16765502
+02/25/2022 12:05:47 - INFO - __main__ - global_steps 109600 - lr: 0.00001643  loss: -2.12050432
+02/25/2022 12:06:06 - INFO - __main__ - global_steps 109800 - lr: 0.00001640  loss: -2.16416654
+02/25/2022 12:06:26 - INFO - __main__ - global_steps 110000 - lr: 0.00001636  loss: -2.22088043
+02/25/2022 12:06:45 - INFO - __main__ - global_steps 110200 - lr: 0.00001633  loss: -2.18984934
+02/25/2022 12:07:04 - INFO - __main__ - global_steps 110400 - lr: 0.00001630  loss: -2.24137559
+02/25/2022 12:07:24 - INFO - __main__ - global_steps 110600 - lr: 0.00001627  loss: -2.19363042
+02/25/2022 12:07:44 - INFO - __main__ - global_steps 110800 - lr: 0.00001624  loss: -2.24659038
+02/25/2022 12:08:03 - INFO - __main__ - global_steps 111000 - lr: 0.00001621  loss: -2.27041762
+02/25/2022 12:08:22 - INFO - __main__ - global_steps 111200 - lr: 0.00001618  loss: -2.21417099
+02/25/2022 12:08:42 - INFO - __main__ - global_steps 111400 - lr: 0.00001615  loss: -2.15579228
+02/25/2022 12:09:01 - INFO - __main__ - global_steps 111600 - lr: 0.00001612  loss: -2.24555785
+02/25/2022 12:09:20 - INFO - __main__ - global_steps 111800 - lr: 0.00001609  loss: -2.12563204
+02/25/2022 12:09:40 - INFO - __main__ - global_steps 112000 - lr: 0.00001606  loss: -2.15189102
+02/25/2022 12:09:59 - INFO - __main__ - global_steps 112200 - lr: 0.00001602  loss: -2.21360700
+02/25/2022 12:10:18 - INFO - __main__ - global_steps 112400 - lr: 0.00001599  loss: -2.22633632
+02/25/2022 12:10:38 - INFO - __main__ - global_steps 112600 - lr: 0.00001596  loss: -2.20651772
+02/25/2022 12:10:57 - INFO - __main__ - global_steps 112800 - lr: 0.00001593  loss: -2.27022039
+02/25/2022 12:11:17 - INFO - __main__ - global_steps 113000 - lr: 0.00001590  loss: -2.25000611
+02/25/2022 12:11:36 - INFO - __main__ - global_steps 113200 - lr: 0.00001587  loss: -2.10462878
+02/25/2022 12:11:56 - INFO - __main__ - global_steps 113400 - lr: 0.00001584  loss: -2.18187510
+02/25/2022 12:12:15 - INFO - __main__ - global_steps 113600 - lr: 0.00001581  loss: -2.14450979
+02/25/2022 12:12:35 - INFO - __main__ - global_steps 113800 - lr: 0.00001578  loss: -2.16327193
+02/25/2022 12:12:54 - INFO - __main__ - global_steps 114000 - lr: 0.00001575  loss: -2.12302587
+02/25/2022 12:13:14 - INFO - __main__ - global_steps 114200 - lr: 0.00001572  loss: -2.12568166
+02/25/2022 12:13:33 - INFO - __main__ - global_steps 114400 - lr: 0.00001569  loss: -2.12043889
+02/25/2022 12:13:53 - INFO - __main__ - global_steps 114600 - lr: 0.00001565  loss: -2.22135726
+02/25/2022 12:14:12 - INFO - __main__ - global_steps 114800 - lr: 0.00001562  loss: -2.12291180
+02/25/2022 12:14:32 - INFO - __main__ - global_steps 115000 - lr: 0.00001559  loss: -2.19389154
+02/25/2022 12:14:51 - INFO - __main__ - global_steps 115200 - lr: 0.00001556  loss: -2.13048421
+02/25/2022 12:15:11 - INFO - __main__ - global_steps 115400 - lr: 0.00001553  loss: -2.15765327
+02/25/2022 12:15:30 - INFO - __main__ - global_steps 115600 - lr: 0.00001550  loss: -2.16893793
+02/25/2022 12:15:50 - INFO - __main__ - global_steps 115800 - lr: 0.00001547  loss: -2.02720278
+02/25/2022 12:16:09 - INFO - __main__ - global_steps 116000 - lr: 0.00001544  loss: -2.17230385
+02/25/2022 12:16:29 - INFO - __main__ - global_steps 116200 - lr: 0.00001541  loss: -2.14981861
+02/25/2022 12:16:49 - INFO - __main__ - global_steps 116400 - lr: 0.00001538  loss: -2.25466425
+02/25/2022 12:17:08 - INFO - __main__ - global_steps 116600 - lr: 0.00001535  loss: -2.23570215
+02/25/2022 12:17:28 - INFO - __main__ - global_steps 116800 - lr: 0.00001532  loss: -2.13462877
+02/25/2022 12:17:47 - INFO - __main__ - global_steps 117000 - lr: 0.00001528  loss: -2.09822113
+02/25/2022 12:18:06 - INFO - __main__ - global_steps 117200 - lr: 0.00001525  loss: -2.18672263
+02/25/2022 12:18:25 - INFO - __main__ - global_steps 117400 - lr: 0.00001522  loss: -2.13165756
+02/25/2022 12:18:45 - INFO - __main__ - global_steps 117600 - lr: 0.00001519  loss: -2.10575446
+02/25/2022 12:19:04 - INFO - __main__ - global_steps 117800 - lr: 0.00001516  loss: -2.11607887
+02/25/2022 12:19:23 - INFO - __main__ - global_steps 118000 - lr: 0.00001513  loss: -2.16367405
+02/25/2022 12:19:43 - INFO - __main__ - global_steps 118200 - lr: 0.00001510  loss: -2.11612686
+02/25/2022 12:20:02 - INFO - __main__ - global_steps 118400 - lr: 0.00001507  loss: -2.20761324
+02/25/2022 12:20:21 - INFO - __main__ - global_steps 118600 - lr: 0.00001504  loss: -2.10184805
+02/25/2022 12:20:41 - INFO - __main__ - global_steps 118800 - lr: 0.00001501  loss: -2.08631385
+02/25/2022 12:20:45 - INFO - __main__ - ********** Evaluate Step 118844 **********
+02/25/2022 12:20:45 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 12:21:57 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:21:57 - INFO - __main__ - f1 = 0.81588076002059
+02/25/2022 12:21:57 - INFO - __main__ - precision = 0.8321767713659609
+02/25/2022 12:21:57 - INFO - __main__ - recall = 0.8002107204003692
+02/25/2022 12:21:57 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:21:57 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 12:21:58 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-118844-spo-f1-0.81588076002059
+02/25/2022 12:21:58 - INFO - __main__ - *************************************
+02/25/2022 12:22:13 - INFO - __main__ - global_steps 119000 - lr: 0.00001498  loss: -2.26358920
+02/25/2022 12:22:33 - INFO - __main__ - global_steps 119200 - lr: 0.00001495  loss: -2.27986470
+02/25/2022 12:22:52 - INFO - __main__ - global_steps 119400 - lr: 0.00001491  loss: -2.23668038
+02/25/2022 12:23:11 - INFO - __main__ - global_steps 119600 - lr: 0.00001488  loss: -2.26055080
+02/25/2022 12:23:31 - INFO - __main__ - global_steps 119800 - lr: 0.00001485  loss: -2.31612092
+02/25/2022 12:23:50 - INFO - __main__ - global_steps 120000 - lr: 0.00001482  loss: -2.31913271
+02/25/2022 12:24:09 - INFO - __main__ - global_steps 120200 - lr: 0.00001479  loss: -2.22258572
+02/25/2022 12:24:29 - INFO - __main__ - global_steps 120400 - lr: 0.00001476  loss: -2.29402014
+02/25/2022 12:24:48 - INFO - __main__ - global_steps 120600 - lr: 0.00001473  loss: -2.21012360
+02/25/2022 12:25:07 - INFO - __main__ - global_steps 120800 - lr: 0.00001470  loss: -2.34972215
+02/25/2022 12:25:27 - INFO - __main__ - global_steps 121000 - lr: 0.00001467  loss: -2.25202249
+02/25/2022 12:25:46 - INFO - __main__ - global_steps 121200 - lr: 0.00001464  loss: -2.23532006
+02/25/2022 12:26:06 - INFO - __main__ - global_steps 121400 - lr: 0.00001461  loss: -2.33884543
+02/25/2022 12:26:25 - INFO - __main__ - global_steps 121600 - lr: 0.00001457  loss: -2.32791680
+02/25/2022 12:26:44 - INFO - __main__ - global_steps 121800 - lr: 0.00001454  loss: -2.26679841
+02/25/2022 12:27:03 - INFO - __main__ - global_steps 122000 - lr: 0.00001451  loss: -2.26788588
+02/25/2022 12:27:23 - INFO - __main__ - global_steps 122200 - lr: 0.00001448  loss: -2.28509027
+02/25/2022 12:27:42 - INFO - __main__ - global_steps 122400 - lr: 0.00001445  loss: -2.24209781
+02/25/2022 12:28:02 - INFO - __main__ - global_steps 122600 - lr: 0.00001442  loss: -2.23041761
+02/25/2022 12:28:21 - INFO - __main__ - global_steps 122800 - lr: 0.00001439  loss: -2.30395610
+02/25/2022 12:28:40 - INFO - __main__ - global_steps 123000 - lr: 0.00001436  loss: -2.38866479
+02/25/2022 12:29:00 - INFO - __main__ - global_steps 123200 - lr: 0.00001433  loss: -2.24965253
+02/25/2022 12:29:19 - INFO - __main__ - global_steps 123400 - lr: 0.00001430  loss: -2.33830432
+02/25/2022 12:29:39 - INFO - __main__ - global_steps 123600 - lr: 0.00001427  loss: -2.31701924
+02/25/2022 12:29:58 - INFO - __main__ - global_steps 123800 - lr: 0.00001424  loss: -2.30730839
+02/25/2022 12:30:17 - INFO - __main__ - global_steps 124000 - lr: 0.00001420  loss: -2.23387150
+02/25/2022 12:30:36 - INFO - __main__ - global_steps 124200 - lr: 0.00001417  loss: -2.19512739
+02/25/2022 12:30:56 - INFO - __main__ - global_steps 124400 - lr: 0.00001414  loss: -2.35389639
+02/25/2022 12:31:15 - INFO - __main__ - global_steps 124600 - lr: 0.00001411  loss: -2.21573232
+02/25/2022 12:31:35 - INFO - __main__ - global_steps 124800 - lr: 0.00001408  loss: -2.24268170
+02/25/2022 12:31:55 - INFO - __main__ - global_steps 125000 - lr: 0.00001405  loss: -2.18901633
+02/25/2022 12:32:14 - INFO - __main__ - global_steps 125200 - lr: 0.00001402  loss: -2.27066958
+02/25/2022 12:32:33 - INFO - __main__ - global_steps 125400 - lr: 0.00001399  loss: -2.24657145
+02/25/2022 12:32:52 - INFO - __main__ - global_steps 125600 - lr: 0.00001396  loss: -2.22557337
+02/25/2022 12:33:12 - INFO - __main__ - global_steps 125800 - lr: 0.00001393  loss: -2.26320297
+02/25/2022 12:33:31 - INFO - __main__ - global_steps 126000 - lr: 0.00001390  loss: -2.31003643
+02/25/2022 12:33:50 - INFO - __main__ - global_steps 126200 - lr: 0.00001387  loss: -2.23080632
+02/25/2022 12:34:10 - INFO - __main__ - global_steps 126400 - lr: 0.00001383  loss: -2.29558158
+02/25/2022 12:34:29 - INFO - __main__ - global_steps 126600 - lr: 0.00001380  loss: -2.20939036
+02/25/2022 12:34:49 - INFO - __main__ - global_steps 126800 - lr: 0.00001377  loss: -2.25474835
+02/25/2022 12:35:08 - INFO - __main__ - global_steps 127000 - lr: 0.00001374  loss: -2.22007240
+02/25/2022 12:35:28 - INFO - __main__ - global_steps 127200 - lr: 0.00001371  loss: -2.25907548
+02/25/2022 12:35:47 - INFO - __main__ - global_steps 127400 - lr: 0.00001368  loss: -2.30918376
+02/25/2022 12:36:06 - INFO - __main__ - global_steps 127600 - lr: 0.00001365  loss: -2.29584586
+02/25/2022 12:36:25 - INFO - __main__ - global_steps 127800 - lr: 0.00001362  loss: -2.24019654
+02/25/2022 12:36:45 - INFO - __main__ - global_steps 128000 - lr: 0.00001359  loss: -2.26358733
+02/25/2022 12:37:04 - INFO - __main__ - global_steps 128200 - lr: 0.00001356  loss: -2.37578386
+02/25/2022 12:37:23 - INFO - __main__ - global_steps 128400 - lr: 0.00001353  loss: -2.24976680
+02/25/2022 12:37:43 - INFO - __main__ - global_steps 128600 - lr: 0.00001350  loss: -2.24575910
+02/25/2022 12:38:02 - INFO - __main__ - global_steps 128800 - lr: 0.00001346  loss: -2.30413698
+02/25/2022 12:38:21 - INFO - __main__ - global_steps 129000 - lr: 0.00001343  loss: -2.18206086
+02/25/2022 12:38:41 - INFO - __main__ - global_steps 129200 - lr: 0.00001340  loss: -2.25424842
+02/25/2022 12:39:00 - INFO - __main__ - global_steps 129400 - lr: 0.00001337  loss: -2.27129546
+02/25/2022 12:39:19 - INFO - __main__ - global_steps 129600 - lr: 0.00001334  loss: -2.24010472
+02/25/2022 12:39:24 - INFO - __main__ - ********** Evaluate Step 129648 **********
+02/25/2022 12:39:24 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 12:40:36 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:40:36 - INFO - __main__ - f1 = 0.8152701249094465
+02/25/2022 12:40:36 - INFO - __main__ - precision = 0.8153596206200057
+02/25/2022 12:40:36 - INFO - __main__ - recall = 0.8151806488432333
+02/25/2022 12:40:36 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:40:36 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 12:40:37 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-129648-spo-f1-0.8152701249094465
+02/25/2022 12:40:37 - INFO - __main__ - *************************************
+02/25/2022 12:40:52 - INFO - __main__ - global_steps 129800 - lr: 0.00001331  loss: -2.32856298
+02/25/2022 12:41:11 - INFO - __main__ - global_steps 130000 - lr: 0.00001328  loss: -2.41998184
+02/25/2022 12:41:30 - INFO - __main__ - global_steps 130200 - lr: 0.00001325  loss: -2.33682727
+02/25/2022 12:41:50 - INFO - __main__ - global_steps 130400 - lr: 0.00001322  loss: -2.30935249
+02/25/2022 12:42:10 - INFO - __main__ - global_steps 130600 - lr: 0.00001319  loss: -2.32497417
+02/25/2022 12:42:29 - INFO - __main__ - global_steps 130800 - lr: 0.00001316  loss: -2.33314642
+02/25/2022 12:42:48 - INFO - __main__ - global_steps 131000 - lr: 0.00001312  loss: -2.35920233
+02/25/2022 12:43:08 - INFO - __main__ - global_steps 131200 - lr: 0.00001309  loss: -2.25309717
+02/25/2022 12:43:28 - INFO - __main__ - global_steps 131400 - lr: 0.00001306  loss: -2.28381775
+02/25/2022 12:43:48 - INFO - __main__ - global_steps 131600 - lr: 0.00001303  loss: -2.39049064
+02/25/2022 12:44:07 - INFO - __main__ - global_steps 131800 - lr: 0.00001300  loss: -2.37194652
+02/25/2022 12:44:26 - INFO - __main__ - global_steps 132000 - lr: 0.00001297  loss: -2.38988805
+02/25/2022 12:44:46 - INFO - __main__ - global_steps 132200 - lr: 0.00001294  loss: -2.39250029
+02/25/2022 12:45:05 - INFO - __main__ - global_steps 132400 - lr: 0.00001291  loss: -2.25926749
+02/25/2022 12:45:26 - INFO - __main__ - global_steps 132600 - lr: 0.00001288  loss: -2.43346249
+02/25/2022 12:45:45 - INFO - __main__ - global_steps 132800 - lr: 0.00001285  loss: -2.38447966
+02/25/2022 12:46:05 - INFO - __main__ - global_steps 133000 - lr: 0.00001282  loss: -2.18544570
+02/25/2022 12:46:25 - INFO - __main__ - global_steps 133200 - lr: 0.00001279  loss: -2.36892401
+02/25/2022 12:46:44 - INFO - __main__ - global_steps 133400 - lr: 0.00001275  loss: -2.36612798
+02/25/2022 12:47:04 - INFO - __main__ - global_steps 133600 - lr: 0.00001272  loss: -2.42026672
+02/25/2022 12:47:23 - INFO - __main__ - global_steps 133800 - lr: 0.00001269  loss: -2.35323982
+02/25/2022 12:47:43 - INFO - __main__ - global_steps 134000 - lr: 0.00001266  loss: -2.37049771
+02/25/2022 12:48:03 - INFO - __main__ - global_steps 134200 - lr: 0.00001263  loss: -2.34360607
+02/25/2022 12:48:22 - INFO - __main__ - global_steps 134400 - lr: 0.00001260  loss: -2.28106998
+02/25/2022 12:48:42 - INFO - __main__ - global_steps 134600 - lr: 0.00001257  loss: -2.33241624
+02/25/2022 12:49:01 - INFO - __main__ - global_steps 134800 - lr: 0.00001254  loss: -2.36088359
+02/25/2022 12:49:21 - INFO - __main__ - global_steps 135000 - lr: 0.00001251  loss: -2.30806481
+02/25/2022 12:49:40 - INFO - __main__ - global_steps 135200 - lr: 0.00001248  loss: -2.28233899
+02/25/2022 12:50:00 - INFO - __main__ - global_steps 135400 - lr: 0.00001245  loss: -2.27026471
+02/25/2022 12:50:20 - INFO - __main__ - global_steps 135600 - lr: 0.00001242  loss: -2.39597169
+02/25/2022 12:50:39 - INFO - __main__ - global_steps 135800 - lr: 0.00001238  loss: -2.30651411
+02/25/2022 12:50:59 - INFO - __main__ - global_steps 136000 - lr: 0.00001235  loss: -2.33873790
+02/25/2022 12:51:19 - INFO - __main__ - global_steps 136200 - lr: 0.00001232  loss: -2.32934010
+02/25/2022 12:51:38 - INFO - __main__ - global_steps 136400 - lr: 0.00001229  loss: -2.37029305
+02/25/2022 12:51:58 - INFO - __main__ - global_steps 136600 - lr: 0.00001226  loss: -2.34495514
+02/25/2022 12:52:18 - INFO - __main__ - global_steps 136800 - lr: 0.00001223  loss: -2.34346552
+02/25/2022 12:52:37 - INFO - __main__ - global_steps 137000 - lr: 0.00001220  loss: -2.33762681
+02/25/2022 12:52:57 - INFO - __main__ - global_steps 137200 - lr: 0.00001217  loss: -2.35770517
+02/25/2022 12:53:16 - INFO - __main__ - global_steps 137400 - lr: 0.00001214  loss: -2.22747127
+02/25/2022 12:53:36 - INFO - __main__ - global_steps 137600 - lr: 0.00001211  loss: -2.38077122
+02/25/2022 12:53:56 - INFO - __main__ - global_steps 137800 - lr: 0.00001208  loss: -2.38873511
+02/25/2022 12:54:15 - INFO - __main__ - global_steps 138000 - lr: 0.00001204  loss: -2.39063718
+02/25/2022 12:54:34 - INFO - __main__ - global_steps 138200 - lr: 0.00001201  loss: -2.44028630
+02/25/2022 12:54:54 - INFO - __main__ - global_steps 138400 - lr: 0.00001198  loss: -2.46646198
+02/25/2022 12:55:14 - INFO - __main__ - global_steps 138600 - lr: 0.00001195  loss: -2.32060667
+02/25/2022 12:55:33 - INFO - __main__ - global_steps 138800 - lr: 0.00001192  loss: -2.45957251
+02/25/2022 12:55:53 - INFO - __main__ - global_steps 139000 - lr: 0.00001189  loss: -2.36902203
+02/25/2022 12:56:12 - INFO - __main__ - global_steps 139200 - lr: 0.00001186  loss: -2.31906861
+02/25/2022 12:56:32 - INFO - __main__ - global_steps 139400 - lr: 0.00001183  loss: -2.35048707
+02/25/2022 12:56:51 - INFO - __main__ - global_steps 139600 - lr: 0.00001180  loss: -2.30198100
+02/25/2022 12:57:11 - INFO - __main__ - global_steps 139800 - lr: 0.00001177  loss: -2.33437626
+02/25/2022 12:57:31 - INFO - __main__ - global_steps 140000 - lr: 0.00001174  loss: -2.38876681
+02/25/2022 12:57:50 - INFO - __main__ - global_steps 140200 - lr: 0.00001171  loss: -2.41995155
+02/25/2022 12:58:09 - INFO - __main__ - global_steps 140400 - lr: 0.00001167  loss: -2.33372364
+02/25/2022 12:58:14 - INFO - __main__ - ********** Evaluate Step 140452 **********
+02/25/2022 12:58:14 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 12:59:26 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:59:26 - INFO - __main__ - f1 = 0.817143727161998
+02/25/2022 12:59:26 - INFO - __main__ - precision = 0.8097814372548179
+02/25/2022 12:59:26 - INFO - __main__ - recall = 0.8246411168181224
+02/25/2022 12:59:26 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 12:59:26 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 12:59:26 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-140452-spo-f1-0.817143727161998
+02/25/2022 12:59:26 - INFO - __main__ - *************************************
+02/25/2022 12:59:40 - INFO - __main__ - global_steps 140600 - lr: 0.00001164  loss: -2.52819120
+02/25/2022 13:00:00 - INFO - __main__ - global_steps 140800 - lr: 0.00001161  loss: -2.45969501
+02/25/2022 13:00:19 - INFO - __main__ - global_steps 141000 - lr: 0.00001158  loss: -2.42694420
+02/25/2022 13:00:38 - INFO - __main__ - global_steps 141200 - lr: 0.00001155  loss: -2.45025117
+02/25/2022 13:00:57 - INFO - __main__ - global_steps 141400 - lr: 0.00001152  loss: -2.44580575
+02/25/2022 13:01:17 - INFO - __main__ - global_steps 141600 - lr: 0.00001149  loss: -2.36752466
+02/25/2022 13:01:36 - INFO - __main__ - global_steps 141800 - lr: 0.00001146  loss: -2.44076558
+02/25/2022 13:01:55 - INFO - __main__ - global_steps 142000 - lr: 0.00001143  loss: -2.47382796
+02/25/2022 13:02:14 - INFO - __main__ - global_steps 142200 - lr: 0.00001140  loss: -2.32925678
+02/25/2022 13:02:34 - INFO - __main__ - global_steps 142400 - lr: 0.00001137  loss: -2.44771218
+02/25/2022 13:02:53 - INFO - __main__ - global_steps 142600 - lr: 0.00001134  loss: -2.45120198
+02/25/2022 13:03:12 - INFO - __main__ - global_steps 142800 - lr: 0.00001130  loss: -2.41090282
+02/25/2022 13:03:31 - INFO - __main__ - global_steps 143000 - lr: 0.00001127  loss: -2.42626080
+02/25/2022 13:03:51 - INFO - __main__ - global_steps 143200 - lr: 0.00001124  loss: -2.39647620
+02/25/2022 13:04:10 - INFO - __main__ - global_steps 143400 - lr: 0.00001121  loss: -2.37648649
+02/25/2022 13:04:29 - INFO - __main__ - global_steps 143600 - lr: 0.00001118  loss: -2.48670728
+02/25/2022 13:04:48 - INFO - __main__ - global_steps 143800 - lr: 0.00001115  loss: -2.45816514
+02/25/2022 13:05:08 - INFO - __main__ - global_steps 144000 - lr: 0.00001112  loss: -2.39881219
+02/25/2022 13:05:27 - INFO - __main__ - global_steps 144200 - lr: 0.00001109  loss: -2.33164917
+02/25/2022 13:05:46 - INFO - __main__ - global_steps 144400 - lr: 0.00001106  loss: -2.48695925
+02/25/2022 13:06:06 - INFO - __main__ - global_steps 144600 - lr: 0.00001103  loss: -2.41510277
+02/25/2022 13:06:25 - INFO - __main__ - global_steps 144800 - lr: 0.00001100  loss: -2.53333316
+02/25/2022 13:06:44 - INFO - __main__ - global_steps 145000 - lr: 0.00001097  loss: -2.40554413
+02/25/2022 13:07:04 - INFO - __main__ - global_steps 145200 - lr: 0.00001093  loss: -2.43814189
+02/25/2022 13:07:23 - INFO - __main__ - global_steps 145400 - lr: 0.00001090  loss: -2.43750544
+02/25/2022 13:07:42 - INFO - __main__ - global_steps 145600 - lr: 0.00001087  loss: -2.44442062
+02/25/2022 13:08:02 - INFO - __main__ - global_steps 145800 - lr: 0.00001084  loss: -2.35850901
+02/25/2022 13:08:22 - INFO - __main__ - global_steps 146000 - lr: 0.00001081  loss: -2.41253305
+02/25/2022 13:08:42 - INFO - __main__ - global_steps 146200 - lr: 0.00001078  loss: -2.30379843
+02/25/2022 13:09:01 - INFO - __main__ - global_steps 146400 - lr: 0.00001075  loss: -2.39352712
+02/25/2022 13:09:21 - INFO - __main__ - global_steps 146600 - lr: 0.00001072  loss: -2.39057196
+02/25/2022 13:09:41 - INFO - __main__ - global_steps 146800 - lr: 0.00001069  loss: -2.39675465
+02/25/2022 13:10:00 - INFO - __main__ - global_steps 147000 - lr: 0.00001066  loss: -2.49651322
+02/25/2022 13:10:20 - INFO - __main__ - global_steps 147200 - lr: 0.00001063  loss: -2.45954083
+02/25/2022 13:10:39 - INFO - __main__ - global_steps 147400 - lr: 0.00001059  loss: -2.35867650
+02/25/2022 13:10:58 - INFO - __main__ - global_steps 147600 - lr: 0.00001056  loss: -2.36714820
+02/25/2022 13:11:17 - INFO - __main__ - global_steps 147800 - lr: 0.00001053  loss: -2.44642116
+02/25/2022 13:11:36 - INFO - __main__ - global_steps 148000 - lr: 0.00001050  loss: -2.31703965
+02/25/2022 13:11:55 - INFO - __main__ - global_steps 148200 - lr: 0.00001047  loss: -2.47977643
+02/25/2022 13:12:15 - INFO - __main__ - global_steps 148400 - lr: 0.00001044  loss: -2.40207103
+02/25/2022 13:12:35 - INFO - __main__ - global_steps 148600 - lr: 0.00001041  loss: -2.42891559
+02/25/2022 13:12:55 - INFO - __main__ - global_steps 148800 - lr: 0.00001038  loss: -2.40369287
+02/25/2022 13:13:15 - INFO - __main__ - global_steps 149000 - lr: 0.00001035  loss: -2.41603550
+02/25/2022 13:13:34 - INFO - __main__ - global_steps 149200 - lr: 0.00001032  loss: -2.35560462
+02/25/2022 13:13:54 - INFO - __main__ - global_steps 149400 - lr: 0.00001029  loss: -2.41238664
+02/25/2022 13:14:14 - INFO - __main__ - global_steps 149600 - lr: 0.00001026  loss: -2.42000387
+02/25/2022 13:14:33 - INFO - __main__ - global_steps 149800 - lr: 0.00001022  loss: -2.40048498
+02/25/2022 13:14:53 - INFO - __main__ - global_steps 150000 - lr: 0.00001019  loss: -2.58302137
+02/25/2022 13:15:12 - INFO - __main__ - global_steps 150200 - lr: 0.00001016  loss: -2.27766147
+02/25/2022 13:15:32 - INFO - __main__ - global_steps 150400 - lr: 0.00001013  loss: -2.42312333
+02/25/2022 13:15:51 - INFO - __main__ - global_steps 150600 - lr: 0.00001010  loss: -2.42923428
+02/25/2022 13:16:10 - INFO - __main__ - global_steps 150800 - lr: 0.00001007  loss: -2.49932806
+02/25/2022 13:16:30 - INFO - __main__ - global_steps 151000 - lr: 0.00001004  loss: -2.49037810
+02/25/2022 13:16:49 - INFO - __main__ - global_steps 151200 - lr: 0.00001001  loss: -2.36796395
+02/25/2022 13:16:55 - INFO - __main__ - ********** Evaluate Step 151256 **********
+02/25/2022 13:16:55 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 13:18:07 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 13:18:07 - INFO - __main__ - f1 = 0.8166869071454365
+02/25/2022 13:18:07 - INFO - __main__ - precision = 0.8141482887245604
+02/25/2022 13:18:07 - INFO - __main__ - recall = 0.8192414065586728
+02/25/2022 13:18:07 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 13:18:07 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 13:18:08 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-151256-spo-f1-0.8166869071454365
+02/25/2022 13:18:08 - INFO - __main__ - *************************************
+02/25/2022 13:18:22 - INFO - __main__ - global_steps 151400 - lr: 0.00000998  loss: -2.49829944
+02/25/2022 13:18:41 - INFO - __main__ - global_steps 151600 - lr: 0.00000995  loss: -2.56307545
+02/25/2022 13:19:01 - INFO - __main__ - global_steps 151800 - lr: 0.00000992  loss: -2.52841947
+02/25/2022 13:19:20 - INFO - __main__ - global_steps 152000 - lr: 0.00000989  loss: -2.56588490
+02/25/2022 13:19:40 - INFO - __main__ - global_steps 152200 - lr: 0.00000985  loss: -2.40465950
+02/25/2022 13:20:00 - INFO - __main__ - global_steps 152400 - lr: 0.00000982  loss: -2.42314600
+02/25/2022 13:20:19 - INFO - __main__ - global_steps 152600 - lr: 0.00000979  loss: -2.50560086
+02/25/2022 13:20:38 - INFO - __main__ - global_steps 152800 - lr: 0.00000976  loss: -2.52998353
+02/25/2022 13:20:58 - INFO - __main__ - global_steps 153000 - lr: 0.00000973  loss: -2.48604608
+02/25/2022 13:21:18 - INFO - __main__ - global_steps 153200 - lr: 0.00000970  loss: -2.49161156
+02/25/2022 13:21:37 - INFO - __main__ - global_steps 153400 - lr: 0.00000967  loss: -2.45533484
+02/25/2022 13:21:57 - INFO - __main__ - global_steps 153600 - lr: 0.00000964  loss: -2.52170153
+02/25/2022 13:22:17 - INFO - __main__ - global_steps 153800 - lr: 0.00000961  loss: -2.51647981
+02/25/2022 13:22:36 - INFO - __main__ - global_steps 154000 - lr: 0.00000958  loss: -2.55637768
+02/25/2022 13:22:56 - INFO - __main__ - global_steps 154200 - lr: 0.00000955  loss: -2.44577550
+02/25/2022 13:23:16 - INFO - __main__ - global_steps 154400 - lr: 0.00000951  loss: -2.52760801
+02/25/2022 13:23:36 - INFO - __main__ - global_steps 154600 - lr: 0.00000948  loss: -2.38427135
+02/25/2022 13:23:55 - INFO - __main__ - global_steps 154800 - lr: 0.00000945  loss: -2.39604454
+02/25/2022 13:24:15 - INFO - __main__ - global_steps 155000 - lr: 0.00000942  loss: -2.53969418
+02/25/2022 13:24:35 - INFO - __main__ - global_steps 155200 - lr: 0.00000939  loss: -2.46157612
+02/25/2022 13:24:55 - INFO - __main__ - global_steps 155400 - lr: 0.00000936  loss: -2.40410392
+02/25/2022 13:25:14 - INFO - __main__ - global_steps 155600 - lr: 0.00000933  loss: -2.52332102
+02/25/2022 13:25:34 - INFO - __main__ - global_steps 155800 - lr: 0.00000930  loss: -2.46280645
+02/25/2022 13:25:53 - INFO - __main__ - global_steps 156000 - lr: 0.00000927  loss: -2.51756452
+02/25/2022 13:26:12 - INFO - __main__ - global_steps 156200 - lr: 0.00000924  loss: -2.45954620
+02/25/2022 13:26:32 - INFO - __main__ - global_steps 156400 - lr: 0.00000921  loss: -2.44556063
+02/25/2022 13:26:51 - INFO - __main__ - global_steps 156600 - lr: 0.00000918  loss: -2.44855912
+02/25/2022 13:27:11 - INFO - __main__ - global_steps 156800 - lr: 0.00000914  loss: -2.44077250
+02/25/2022 13:27:31 - INFO - __main__ - global_steps 157000 - lr: 0.00000911  loss: -2.41682575
+02/25/2022 13:27:50 - INFO - __main__ - global_steps 157200 - lr: 0.00000908  loss: -2.54276052
+02/25/2022 13:28:10 - INFO - __main__ - global_steps 157400 - lr: 0.00000905  loss: -2.48064867
+02/25/2022 13:28:30 - INFO - __main__ - global_steps 157600 - lr: 0.00000902  loss: -2.45113747
+02/25/2022 13:28:49 - INFO - __main__ - global_steps 157800 - lr: 0.00000899  loss: -2.49955918
+02/25/2022 13:29:09 - INFO - __main__ - global_steps 158000 - lr: 0.00000896  loss: -2.41237200
+02/25/2022 13:29:29 - INFO - __main__ - global_steps 158200 - lr: 0.00000893  loss: -2.37689651
+02/25/2022 13:29:49 - INFO - __main__ - global_steps 158400 - lr: 0.00000890  loss: -2.52429608
+02/25/2022 13:30:08 - INFO - __main__ - global_steps 158600 - lr: 0.00000887  loss: -2.55010142
+02/25/2022 13:30:27 - INFO - __main__ - global_steps 158800 - lr: 0.00000884  loss: -2.43995500
+02/25/2022 13:30:47 - INFO - __main__ - global_steps 159000 - lr: 0.00000881  loss: -2.52327454
+02/25/2022 13:31:06 - INFO - __main__ - global_steps 159200 - lr: 0.00000877  loss: -2.51138085
+02/25/2022 13:31:26 - INFO - __main__ - global_steps 159400 - lr: 0.00000874  loss: -2.48515839
+02/25/2022 13:31:46 - INFO - __main__ - global_steps 159600 - lr: 0.00000871  loss: -2.49085216
+02/25/2022 13:32:05 - INFO - __main__ - global_steps 159800 - lr: 0.00000868  loss: -2.47465193
+02/25/2022 13:32:24 - INFO - __main__ - global_steps 160000 - lr: 0.00000865  loss: -2.49305182
+02/25/2022 13:32:43 - INFO - __main__ - global_steps 160200 - lr: 0.00000862  loss: -2.51691887
+02/25/2022 13:33:02 - INFO - __main__ - global_steps 160400 - lr: 0.00000859  loss: -2.47587260
+02/25/2022 13:33:22 - INFO - __main__ - global_steps 160600 - lr: 0.00000856  loss: -2.50974586
+02/25/2022 13:33:41 - INFO - __main__ - global_steps 160800 - lr: 0.00000853  loss: -2.41246293
+02/25/2022 13:34:01 - INFO - __main__ - global_steps 161000 - lr: 0.00000850  loss: -2.44259067
+02/25/2022 13:34:20 - INFO - __main__ - global_steps 161200 - lr: 0.00000847  loss: -2.58789288
+02/25/2022 13:34:39 - INFO - __main__ - global_steps 161400 - lr: 0.00000844  loss: -2.59796379
+02/25/2022 13:34:59 - INFO - __main__ - global_steps 161600 - lr: 0.00000840  loss: -2.41855010
+02/25/2022 13:35:18 - INFO - __main__ - global_steps 161800 - lr: 0.00000837  loss: -2.46579390
+02/25/2022 13:35:37 - INFO - __main__ - global_steps 162000 - lr: 0.00000834  loss: -2.46287939
+02/25/2022 13:35:43 - INFO - __main__ - ********** Evaluate Step 162060 **********
+02/25/2022 13:35:43 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 13:36:56 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 13:36:56 - INFO - __main__ - f1 = 0.8146157390140633
+02/25/2022 13:36:56 - INFO - __main__ - precision = 0.8142048943075173
+02/25/2022 13:36:56 - INFO - __main__ - recall = 0.8150269985512977
+02/25/2022 13:36:56 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 13:36:56 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 13:36:56 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-162060-spo-f1-0.8146157390140633
+02/25/2022 13:36:56 - INFO - __main__ - *************************************
+02/25/2022 13:37:10 - INFO - __main__ - global_steps 162200 - lr: 0.00000831  loss: -2.38339577
+02/25/2022 13:37:30 - INFO - __main__ - global_steps 162400 - lr: 0.00000828  loss: -2.52037440
+02/25/2022 13:37:50 - INFO - __main__ - global_steps 162600 - lr: 0.00000825  loss: -2.51075978
+02/25/2022 13:38:09 - INFO - __main__ - global_steps 162800 - lr: 0.00000822  loss: -2.57377803
+02/25/2022 13:38:28 - INFO - __main__ - global_steps 163000 - lr: 0.00000819  loss: -2.61029725
+02/25/2022 13:38:48 - INFO - __main__ - global_steps 163200 - lr: 0.00000816  loss: -2.53712665
+02/25/2022 13:39:08 - INFO - __main__ - global_steps 163400 - lr: 0.00000813  loss: -2.59648199
+02/25/2022 13:39:28 - INFO - __main__ - global_steps 163600 - lr: 0.00000810  loss: -2.57812609
+02/25/2022 13:39:47 - INFO - __main__ - global_steps 163800 - lr: 0.00000806  loss: -2.58231620
+02/25/2022 13:40:07 - INFO - __main__ - global_steps 164000 - lr: 0.00000803  loss: -2.60709539
+02/25/2022 13:40:26 - INFO - __main__ - global_steps 164200 - lr: 0.00000800  loss: -2.48490564
+02/25/2022 13:40:46 - INFO - __main__ - global_steps 164400 - lr: 0.00000797  loss: -2.50512621
+02/25/2022 13:41:05 - INFO - __main__ - global_steps 164600 - lr: 0.00000794  loss: -2.49660443
+02/25/2022 13:41:25 - INFO - __main__ - global_steps 164800 - lr: 0.00000791  loss: -2.50439767
+02/25/2022 13:41:45 - INFO - __main__ - global_steps 165000 - lr: 0.00000788  loss: -2.55033404
+02/25/2022 13:42:05 - INFO - __main__ - global_steps 165200 - lr: 0.00000785  loss: -2.57111439
+02/25/2022 13:42:24 - INFO - __main__ - global_steps 165400 - lr: 0.00000782  loss: -2.53746553
+02/25/2022 13:42:44 - INFO - __main__ - global_steps 165600 - lr: 0.00000779  loss: -2.56707132
+02/25/2022 13:43:03 - INFO - __main__ - global_steps 165800 - lr: 0.00000776  loss: -2.47184100
+02/25/2022 13:43:23 - INFO - __main__ - global_steps 166000 - lr: 0.00000773  loss: -2.54825362
+02/25/2022 13:43:42 - INFO - __main__ - global_steps 166200 - lr: 0.00000769  loss: -2.43617197
+02/25/2022 13:44:01 - INFO - __main__ - global_steps 166400 - lr: 0.00000766  loss: -2.50328433
+02/25/2022 13:44:21 - INFO - __main__ - global_steps 166600 - lr: 0.00000763  loss: -2.47346697
+02/25/2022 13:44:40 - INFO - __main__ - global_steps 166800 - lr: 0.00000760  loss: -2.49194370
+02/25/2022 13:45:00 - INFO - __main__ - global_steps 167000 - lr: 0.00000757  loss: -2.42952746
+02/25/2022 13:45:19 - INFO - __main__ - global_steps 167200 - lr: 0.00000754  loss: -2.63275108
+02/25/2022 13:45:39 - INFO - __main__ - global_steps 167400 - lr: 0.00000751  loss: -2.57813217
+02/25/2022 13:45:58 - INFO - __main__ - global_steps 167600 - lr: 0.00000748  loss: -2.51833848
+02/25/2022 13:46:18 - INFO - __main__ - global_steps 167800 - lr: 0.00000745  loss: -2.51104629
+02/25/2022 13:46:38 - INFO - __main__ - global_steps 168000 - lr: 0.00000742  loss: -2.54676316
+02/25/2022 13:46:58 - INFO - __main__ - global_steps 168200 - lr: 0.00000739  loss: -2.55729230
+02/25/2022 13:47:18 - INFO - __main__ - global_steps 168400 - lr: 0.00000736  loss: -2.61393963
+02/25/2022 13:47:37 - INFO - __main__ - global_steps 168600 - lr: 0.00000732  loss: -2.60927739
+02/25/2022 13:47:56 - INFO - __main__ - global_steps 168800 - lr: 0.00000729  loss: -2.52660080
+02/25/2022 13:48:16 - INFO - __main__ - global_steps 169000 - lr: 0.00000726  loss: -2.57503957
+02/25/2022 13:48:44 - INFO - __main__ - global_steps 169200 - lr: 0.00000723  loss: -2.55908286
+02/25/2022 13:49:04 - INFO - __main__ - global_steps 169400 - lr: 0.00000720  loss: -2.57829132
+02/25/2022 13:49:27 - INFO - __main__ - global_steps 169600 - lr: 0.00000717  loss: -2.50718557
+02/25/2022 13:49:47 - INFO - __main__ - global_steps 169800 - lr: 0.00000714  loss: -2.48332107
+02/25/2022 13:50:14 - INFO - __main__ - global_steps 170000 - lr: 0.00000711  loss: -2.63736979
+02/25/2022 13:50:34 - INFO - __main__ - global_steps 170200 - lr: 0.00000708  loss: -2.49734466
+02/25/2022 13:50:54 - INFO - __main__ - global_steps 170400 - lr: 0.00000705  loss: -2.50222272
+02/25/2022 13:51:14 - INFO - __main__ - global_steps 170600 - lr: 0.00000702  loss: -2.57381372
+02/25/2022 13:51:36 - INFO - __main__ - global_steps 170800 - lr: 0.00000699  loss: -2.60010693
+02/25/2022 13:51:56 - INFO - __main__ - global_steps 171000 - lr: 0.00000695  loss: -2.57000840
+02/25/2022 13:52:16 - INFO - __main__ - global_steps 171200 - lr: 0.00000692  loss: -2.50568179
+02/25/2022 13:52:36 - INFO - __main__ - global_steps 171400 - lr: 0.00000689  loss: -2.51612526
+02/25/2022 13:52:56 - INFO - __main__ - global_steps 171600 - lr: 0.00000686  loss: -2.58025792
+02/25/2022 13:53:15 - INFO - __main__ - global_steps 171800 - lr: 0.00000683  loss: -2.48730730
+02/25/2022 13:53:35 - INFO - __main__ - global_steps 172000 - lr: 0.00000680  loss: -2.53876747
+02/25/2022 13:53:54 - INFO - __main__ - global_steps 172200 - lr: 0.00000677  loss: -2.51699774
+02/25/2022 13:54:14 - INFO - __main__ - global_steps 172400 - lr: 0.00000674  loss: -2.60029428
+02/25/2022 13:54:33 - INFO - __main__ - global_steps 172600 - lr: 0.00000671  loss: -2.50157960
+02/25/2022 13:54:53 - INFO - __main__ - global_steps 172800 - lr: 0.00000668  loss: -2.40410880
+02/25/2022 13:54:59 - INFO - __main__ - ********** Evaluate Step 172864 **********
+02/25/2022 13:54:59 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 13:56:12 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 13:56:12 - INFO - __main__ - f1 = 0.8146958130671309
+02/25/2022 13:56:12 - INFO - __main__ - precision = 0.8225239938253657
+02/25/2022 13:56:12 - INFO - __main__ - recall = 0.8070152333289438
+02/25/2022 13:56:12 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 13:56:12 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 13:56:13 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-172864-spo-f1-0.8146958130671309
+02/25/2022 13:56:13 - INFO - __main__ - *************************************
+02/25/2022 13:56:26 - INFO - __main__ - global_steps 173000 - lr: 0.00000665  loss: -2.62236790
+02/25/2022 13:56:45 - INFO - __main__ - global_steps 173200 - lr: 0.00000661  loss: -2.71190335
+02/25/2022 13:57:05 - INFO - __main__ - global_steps 173400 - lr: 0.00000658  loss: -2.64486998
+02/25/2022 13:57:25 - INFO - __main__ - global_steps 173600 - lr: 0.00000655  loss: -2.50506012
+02/25/2022 13:57:44 - INFO - __main__ - global_steps 173800 - lr: 0.00000652  loss: -2.59588397
+02/25/2022 13:58:04 - INFO - __main__ - global_steps 174000 - lr: 0.00000649  loss: -2.68349810
+02/25/2022 13:58:24 - INFO - __main__ - global_steps 174200 - lr: 0.00000646  loss: -2.58643584
+02/25/2022 13:58:43 - INFO - __main__ - global_steps 174400 - lr: 0.00000643  loss: -2.59075219
+02/25/2022 13:59:03 - INFO - __main__ - global_steps 174600 - lr: 0.00000640  loss: -2.69534567
+02/25/2022 13:59:23 - INFO - __main__ - global_steps 174800 - lr: 0.00000637  loss: -2.61628529
+02/25/2022 13:59:42 - INFO - __main__ - global_steps 175000 - lr: 0.00000634  loss: -2.57761624
+02/25/2022 14:00:02 - INFO - __main__ - global_steps 175200 - lr: 0.00000631  loss: -2.63299887
+02/25/2022 14:00:22 - INFO - __main__ - global_steps 175400 - lr: 0.00000628  loss: -2.52939680
+02/25/2022 14:00:41 - INFO - __main__ - global_steps 175600 - lr: 0.00000624  loss: -2.62884908
+02/25/2022 14:01:01 - INFO - __main__ - global_steps 175800 - lr: 0.00000621  loss: -2.60999249
+02/25/2022 14:01:20 - INFO - __main__ - global_steps 176000 - lr: 0.00000618  loss: -2.64231914
+02/25/2022 14:01:40 - INFO - __main__ - global_steps 176200 - lr: 0.00000615  loss: -2.48806758
+02/25/2022 14:02:00 - INFO - __main__ - global_steps 176400 - lr: 0.00000612  loss: -2.56178501
+02/25/2022 14:02:19 - INFO - __main__ - global_steps 176600 - lr: 0.00000609  loss: -2.50697501
+02/25/2022 14:02:39 - INFO - __main__ - global_steps 176800 - lr: 0.00000606  loss: -2.56542108
+02/25/2022 14:02:59 - INFO - __main__ - global_steps 177000 - lr: 0.00000603  loss: -2.56065054
+02/25/2022 14:03:18 - INFO - __main__ - global_steps 177200 - lr: 0.00000600  loss: -2.54874473
+02/25/2022 14:03:38 - INFO - __main__ - global_steps 177400 - lr: 0.00000597  loss: -2.63341104
+02/25/2022 14:03:57 - INFO - __main__ - global_steps 177600 - lr: 0.00000594  loss: -2.57827885
+02/25/2022 14:04:17 - INFO - __main__ - global_steps 177800 - lr: 0.00000591  loss: -2.54258204
+02/25/2022 14:04:36 - INFO - __main__ - global_steps 178000 - lr: 0.00000587  loss: -2.54582904
+02/25/2022 14:04:56 - INFO - __main__ - global_steps 178200 - lr: 0.00000584  loss: -2.63690640
+02/25/2022 14:05:15 - INFO - __main__ - global_steps 178400 - lr: 0.00000581  loss: -2.57471139
+02/25/2022 14:05:35 - INFO - __main__ - global_steps 178600 - lr: 0.00000578  loss: -2.51754493
+02/25/2022 14:05:54 - INFO - __main__ - global_steps 178800 - lr: 0.00000575  loss: -2.52954684
+02/25/2022 14:06:13 - INFO - __main__ - global_steps 179000 - lr: 0.00000572  loss: -2.57675075
+02/25/2022 14:06:33 - INFO - __main__ - global_steps 179200 - lr: 0.00000569  loss: -2.58415384
+02/25/2022 14:06:52 - INFO - __main__ - global_steps 179400 - lr: 0.00000566  loss: -2.54889064
+02/25/2022 14:07:12 - INFO - __main__ - global_steps 179600 - lr: 0.00000563  loss: -2.53964729
+02/25/2022 14:07:32 - INFO - __main__ - global_steps 179800 - lr: 0.00000560  loss: -2.64818150
+02/25/2022 14:07:51 - INFO - __main__ - global_steps 180000 - lr: 0.00000557  loss: -2.53858922
+02/25/2022 14:08:10 - INFO - __main__ - global_steps 180200 - lr: 0.00000553  loss: -2.64854580
+02/25/2022 14:08:30 - INFO - __main__ - global_steps 180400 - lr: 0.00000550  loss: -2.58692127
+02/25/2022 14:08:49 - INFO - __main__ - global_steps 180600 - lr: 0.00000547  loss: -2.59755017
+02/25/2022 14:09:09 - INFO - __main__ - global_steps 180800 - lr: 0.00000544  loss: -2.57059416
+02/25/2022 14:09:29 - INFO - __main__ - global_steps 181000 - lr: 0.00000541  loss: -2.60791004
+02/25/2022 14:09:48 - INFO - __main__ - global_steps 181200 - lr: 0.00000538  loss: -2.57855643
+02/25/2022 14:10:08 - INFO - __main__ - global_steps 181400 - lr: 0.00000535  loss: -2.55119299
+02/25/2022 14:10:27 - INFO - __main__ - global_steps 181600 - lr: 0.00000532  loss: -2.51636424
+02/25/2022 14:10:47 - INFO - __main__ - global_steps 181800 - lr: 0.00000529  loss: -2.50604860
+02/25/2022 14:11:06 - INFO - __main__ - global_steps 182000 - lr: 0.00000526  loss: -2.59806042
+02/25/2022 14:11:25 - INFO - __main__ - global_steps 182200 - lr: 0.00000523  loss: -2.47754985
+02/25/2022 14:11:45 - INFO - __main__ - global_steps 182400 - lr: 0.00000520  loss: -2.55777878
+02/25/2022 14:12:05 - INFO - __main__ - global_steps 182600 - lr: 0.00000516  loss: -2.54844644
+02/25/2022 14:12:24 - INFO - __main__ - global_steps 182800 - lr: 0.00000513  loss: -2.57815015
+02/25/2022 14:12:44 - INFO - __main__ - global_steps 183000 - lr: 0.00000510  loss: -2.58412809
+02/25/2022 14:13:03 - INFO - __main__ - global_steps 183200 - lr: 0.00000507  loss: -2.66744275
+02/25/2022 14:13:23 - INFO - __main__ - global_steps 183400 - lr: 0.00000504  loss: -2.55724213
+02/25/2022 14:13:43 - INFO - __main__ - global_steps 183600 - lr: 0.00000501  loss: -2.61231673
+02/25/2022 14:13:49 - INFO - __main__ - ********** Evaluate Step 183668 **********
+02/25/2022 14:13:49 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 14:15:03 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 14:15:03 - INFO - __main__ - f1 = 0.8171004773191489
+02/25/2022 14:15:03 - INFO - __main__ - precision = 0.8132188281334932
+02/25/2022 14:15:03 - INFO - __main__ - recall = 0.8210193599367843
+02/25/2022 14:15:03 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 14:15:03 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 14:15:04 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-183668-spo-f1-0.8171004773191489
+02/25/2022 14:15:04 - INFO - __main__ - *************************************
+02/25/2022 14:15:18 - INFO - __main__ - global_steps 183800 - lr: 0.00000498  loss: -2.62482065
+02/25/2022 14:15:38 - INFO - __main__ - global_steps 184000 - lr: 0.00000495  loss: -2.57328110
+02/25/2022 14:15:58 - INFO - __main__ - global_steps 184200 - lr: 0.00000492  loss: -2.57464463
+02/25/2022 14:16:18 - INFO - __main__ - global_steps 184400 - lr: 0.00000489  loss: -2.73519826
+02/25/2022 14:16:37 - INFO - __main__ - global_steps 184600 - lr: 0.00000486  loss: -2.62527683
+02/25/2022 14:16:57 - INFO - __main__ - global_steps 184800 - lr: 0.00000483  loss: -2.56669256
+02/25/2022 14:17:17 - INFO - __main__ - global_steps 185000 - lr: 0.00000479  loss: -2.55801574
+02/25/2022 14:17:36 - INFO - __main__ - global_steps 185200 - lr: 0.00000476  loss: -2.61808390
+02/25/2022 14:17:55 - INFO - __main__ - global_steps 185400 - lr: 0.00000473  loss: -2.58977712
+02/25/2022 14:18:15 - INFO - __main__ - global_steps 185600 - lr: 0.00000470  loss: -2.63603488
+02/25/2022 14:18:34 - INFO - __main__ - global_steps 185800 - lr: 0.00000467  loss: -2.72941697
+02/25/2022 14:18:54 - INFO - __main__ - global_steps 186000 - lr: 0.00000464  loss: -2.64444850
+02/25/2022 14:19:13 - INFO - __main__ - global_steps 186200 - lr: 0.00000461  loss: -2.71204474
+02/25/2022 14:19:33 - INFO - __main__ - global_steps 186400 - lr: 0.00000458  loss: -2.68884649
+02/25/2022 14:19:53 - INFO - __main__ - global_steps 186600 - lr: 0.00000455  loss: -2.58486285
+02/25/2022 14:20:12 - INFO - __main__ - global_steps 186800 - lr: 0.00000452  loss: -2.59652813
+02/25/2022 14:20:32 - INFO - __main__ - global_steps 187000 - lr: 0.00000449  loss: -2.73553832
+02/25/2022 14:20:51 - INFO - __main__ - global_steps 187200 - lr: 0.00000446  loss: -2.61954151
+02/25/2022 14:21:11 - INFO - __main__ - global_steps 187400 - lr: 0.00000442  loss: -2.61689119
+02/25/2022 14:21:31 - INFO - __main__ - global_steps 187600 - lr: 0.00000439  loss: -2.57644504
+02/25/2022 14:21:50 - INFO - __main__ - global_steps 187800 - lr: 0.00000436  loss: -2.63677784
+02/25/2022 14:22:10 - INFO - __main__ - global_steps 188000 - lr: 0.00000433  loss: -2.64285609
+02/25/2022 14:22:29 - INFO - __main__ - global_steps 188200 - lr: 0.00000430  loss: -2.59269109
+02/25/2022 14:22:49 - INFO - __main__ - global_steps 188400 - lr: 0.00000427  loss: -2.55073998
+02/25/2022 14:23:09 - INFO - __main__ - global_steps 188600 - lr: 0.00000424  loss: -2.69788044
+02/25/2022 14:23:29 - INFO - __main__ - global_steps 188800 - lr: 0.00000421  loss: -2.62314636
+02/25/2022 14:23:48 - INFO - __main__ - global_steps 189000 - lr: 0.00000418  loss: -2.69865411
+02/25/2022 14:24:08 - INFO - __main__ - global_steps 189200 - lr: 0.00000415  loss: -2.60111374
+02/25/2022 14:24:28 - INFO - __main__ - global_steps 189400 - lr: 0.00000412  loss: -2.66789462
+02/25/2022 14:24:47 - INFO - __main__ - global_steps 189600 - lr: 0.00000408  loss: -2.62360366
+02/25/2022 14:25:07 - INFO - __main__ - global_steps 189800 - lr: 0.00000405  loss: -2.64340214
+02/25/2022 14:25:26 - INFO - __main__ - global_steps 190000 - lr: 0.00000402  loss: -2.67346549
+02/25/2022 14:25:46 - INFO - __main__ - global_steps 190200 - lr: 0.00000399  loss: -2.58218075
+02/25/2022 14:26:13 - INFO - __main__ - global_steps 190400 - lr: 0.00000396  loss: -2.54717944
+02/25/2022 14:26:45 - INFO - __main__ - global_steps 190600 - lr: 0.00000393  loss: -2.64534356
+02/25/2022 14:27:05 - INFO - __main__ - global_steps 190800 - lr: 0.00000390  loss: -2.56856837
+02/25/2022 14:27:24 - INFO - __main__ - global_steps 191000 - lr: 0.00000387  loss: -2.60345579
+02/25/2022 14:27:44 - INFO - __main__ - global_steps 191200 - lr: 0.00000384  loss: -2.53571682
+02/25/2022 14:28:04 - INFO - __main__ - global_steps 191400 - lr: 0.00000381  loss: -2.59935139
+02/25/2022 14:28:24 - INFO - __main__ - global_steps 191600 - lr: 0.00000378  loss: -2.57629372
+02/25/2022 14:28:43 - INFO - __main__ - global_steps 191800 - lr: 0.00000375  loss: -2.60415292
+02/25/2022 14:29:03 - INFO - __main__ - global_steps 192000 - lr: 0.00000371  loss: -2.56866010
+02/25/2022 14:29:22 - INFO - __main__ - global_steps 192200 - lr: 0.00000368  loss: -2.61719474
+02/25/2022 14:29:42 - INFO - __main__ - global_steps 192400 - lr: 0.00000365  loss: -2.61845283
+02/25/2022 14:30:01 - INFO - __main__ - global_steps 192600 - lr: 0.00000362  loss: -2.69781910
+02/25/2022 14:30:21 - INFO - __main__ - global_steps 192800 - lr: 0.00000359  loss: -2.56403704
+02/25/2022 14:30:41 - INFO - __main__ - global_steps 193000 - lr: 0.00000356  loss: -2.62904703
+02/25/2022 14:31:00 - INFO - __main__ - global_steps 193200 - lr: 0.00000353  loss: -2.64776483
+02/25/2022 14:31:20 - INFO - __main__ - global_steps 193400 - lr: 0.00000350  loss: -2.68343794
+02/25/2022 14:31:39 - INFO - __main__ - global_steps 193600 - lr: 0.00000347  loss: -2.65731904
+02/25/2022 14:31:59 - INFO - __main__ - global_steps 193800 - lr: 0.00000344  loss: -2.62515150
+02/25/2022 14:32:19 - INFO - __main__ - global_steps 194000 - lr: 0.00000341  loss: -2.64665603
+02/25/2022 14:32:39 - INFO - __main__ - global_steps 194200 - lr: 0.00000338  loss: -2.58569774
+02/25/2022 14:32:58 - INFO - __main__ - global_steps 194400 - lr: 0.00000334  loss: -2.57028376
+02/25/2022 14:33:05 - INFO - __main__ - ********** Evaluate Step 194472 **********
+02/25/2022 14:33:05 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 14:34:17 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 14:34:17 - INFO - __main__ - f1 = 0.8170703575547871
+02/25/2022 14:34:17 - INFO - __main__ - precision = 0.817798007784155
+02/25/2022 14:34:17 - INFO - __main__ - recall = 0.8163440010536024
+02/25/2022 14:34:17 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 14:34:17 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 14:34:18 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-194472-spo-f1-0.8170703575547871
+02/25/2022 14:34:18 - INFO - __main__ - *************************************
+02/25/2022 14:34:31 - INFO - __main__ - global_steps 194600 - lr: 0.00000331  loss: -2.62403195
+02/25/2022 14:34:50 - INFO - __main__ - global_steps 194800 - lr: 0.00000328  loss: -2.70951004
+02/25/2022 14:35:09 - INFO - __main__ - global_steps 195000 - lr: 0.00000325  loss: -2.65573340
+02/25/2022 14:35:29 - INFO - __main__ - global_steps 195200 - lr: 0.00000322  loss: -2.67124089
+02/25/2022 14:35:48 - INFO - __main__ - global_steps 195400 - lr: 0.00000319  loss: -2.60116783
+02/25/2022 14:36:08 - INFO - __main__ - global_steps 195600 - lr: 0.00000316  loss: -2.66543428
+02/25/2022 14:36:28 - INFO - __main__ - global_steps 195800 - lr: 0.00000313  loss: -2.61130267
+02/25/2022 14:36:47 - INFO - __main__ - global_steps 196000 - lr: 0.00000310  loss: -2.62930477
+02/25/2022 14:37:07 - INFO - __main__ - global_steps 196200 - lr: 0.00000307  loss: -2.60787122
+02/25/2022 14:37:27 - INFO - __main__ - global_steps 196400 - lr: 0.00000304  loss: -2.64205904
+02/25/2022 14:37:47 - INFO - __main__ - global_steps 196600 - lr: 0.00000301  loss: -2.56624117
+02/25/2022 14:38:06 - INFO - __main__ - global_steps 196800 - lr: 0.00000297  loss: -2.68667859
+02/25/2022 14:38:26 - INFO - __main__ - global_steps 197000 - lr: 0.00000294  loss: -2.68189070
+02/25/2022 14:38:45 - INFO - __main__ - global_steps 197200 - lr: 0.00000291  loss: -2.58962515
+02/25/2022 14:39:05 - INFO - __main__ - global_steps 197400 - lr: 0.00000288  loss: -2.65703559
+02/25/2022 14:39:25 - INFO - __main__ - global_steps 197600 - lr: 0.00000285  loss: -2.66443025
+02/25/2022 14:39:44 - INFO - __main__ - global_steps 197800 - lr: 0.00000282  loss: -2.63618631
+02/25/2022 14:40:04 - INFO - __main__ - global_steps 198000 - lr: 0.00000279  loss: -2.69341588
+02/25/2022 14:40:23 - INFO - __main__ - global_steps 198200 - lr: 0.00000276  loss: -2.66897632
+02/25/2022 14:40:43 - INFO - __main__ - global_steps 198400 - lr: 0.00000273  loss: -2.62918055
+02/25/2022 14:41:03 - INFO - __main__ - global_steps 198600 - lr: 0.00000270  loss: -2.59045159
+02/25/2022 14:41:22 - INFO - __main__ - global_steps 198800 - lr: 0.00000267  loss: -2.72737407
+02/25/2022 14:41:42 - INFO - __main__ - global_steps 199000 - lr: 0.00000263  loss: -2.62871531
+02/25/2022 14:42:02 - INFO - __main__ - global_steps 199200 - lr: 0.00000260  loss: -2.70690431
+02/25/2022 14:42:21 - INFO - __main__ - global_steps 199400 - lr: 0.00000257  loss: -2.68179553
+02/25/2022 14:42:41 - INFO - __main__ - global_steps 199600 - lr: 0.00000254  loss: -2.62569979
+02/25/2022 14:43:01 - INFO - __main__ - global_steps 199800 - lr: 0.00000251  loss: -2.71517514
+02/25/2022 14:43:20 - INFO - __main__ - global_steps 200000 - lr: 0.00000248  loss: -2.62323649
+02/25/2022 14:43:40 - INFO - __main__ - global_steps 200200 - lr: 0.00000245  loss: -2.68599742
+02/25/2022 14:43:59 - INFO - __main__ - global_steps 200400 - lr: 0.00000242  loss: -2.70784958
+02/25/2022 14:44:19 - INFO - __main__ - global_steps 200600 - lr: 0.00000239  loss: -2.66506361
+02/25/2022 14:44:38 - INFO - __main__ - global_steps 200800 - lr: 0.00000236  loss: -2.67078784
+02/25/2022 14:44:58 - INFO - __main__ - global_steps 201000 - lr: 0.00000233  loss: -2.57984955
+02/25/2022 14:45:17 - INFO - __main__ - global_steps 201200 - lr: 0.00000230  loss: -2.67551681
+02/25/2022 14:45:37 - INFO - __main__ - global_steps 201400 - lr: 0.00000226  loss: -2.70338964
+02/25/2022 14:45:57 - INFO - __main__ - global_steps 201600 - lr: 0.00000223  loss: -2.64241101
+02/25/2022 14:46:17 - INFO - __main__ - global_steps 201800 - lr: 0.00000220  loss: -2.60128659
+02/25/2022 14:46:36 - INFO - __main__ - global_steps 202000 - lr: 0.00000217  loss: -2.71037277
+02/25/2022 14:46:55 - INFO - __main__ - global_steps 202200 - lr: 0.00000214  loss: -2.64326076
+02/25/2022 14:47:15 - INFO - __main__ - global_steps 202400 - lr: 0.00000211  loss: -2.66803893
+02/25/2022 14:47:35 - INFO - __main__ - global_steps 202600 - lr: 0.00000208  loss: -2.63211060
+02/25/2022 14:47:55 - INFO - __main__ - global_steps 202800 - lr: 0.00000205  loss: -2.63641659
+02/25/2022 14:48:14 - INFO - __main__ - global_steps 203000 - lr: 0.00000202  loss: -2.67343468
+02/25/2022 14:48:34 - INFO - __main__ - global_steps 203200 - lr: 0.00000199  loss: -2.71455507
+02/25/2022 14:48:53 - INFO - __main__ - global_steps 203400 - lr: 0.00000196  loss: -2.65462493
+02/25/2022 14:49:13 - INFO - __main__ - global_steps 203600 - lr: 0.00000193  loss: -2.66253031
+02/25/2022 14:49:32 - INFO - __main__ - global_steps 203800 - lr: 0.00000189  loss: -2.73626409
+02/25/2022 14:49:52 - INFO - __main__ - global_steps 204000 - lr: 0.00000186  loss: -2.67384222
+02/25/2022 14:50:12 - INFO - __main__ - global_steps 204200 - lr: 0.00000183  loss: -2.60547107
+02/25/2022 14:50:32 - INFO - __main__ - global_steps 204400 - lr: 0.00000180  loss: -2.62353760
+02/25/2022 14:50:51 - INFO - __main__ - global_steps 204600 - lr: 0.00000177  loss: -2.62296317
+02/25/2022 14:51:10 - INFO - __main__ - global_steps 204800 - lr: 0.00000174  loss: -2.66531440
+02/25/2022 14:51:30 - INFO - __main__ - global_steps 205000 - lr: 0.00000171  loss: -2.64232082
+02/25/2022 14:51:50 - INFO - __main__ - global_steps 205200 - lr: 0.00000168  loss: -2.67036526
+02/25/2022 14:51:57 - INFO - __main__ - ********** Evaluate Step 205276 **********
+02/25/2022 14:51:57 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 14:53:09 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 14:53:09 - INFO - __main__ - f1 = 0.8185019906374419
+02/25/2022 14:53:09 - INFO - __main__ - precision = 0.8157183344233708
+02/25/2022 14:53:09 - INFO - __main__ - recall = 0.8213047104789503
+02/25/2022 14:53:09 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 14:53:09 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 14:53:10 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-205276-spo-f1-0.8185019906374419
+02/25/2022 14:53:10 - INFO - __main__ - *************************************
+02/25/2022 14:53:22 - INFO - __main__ - global_steps 205400 - lr: 0.00000165  loss: -2.70199500
+02/25/2022 14:53:42 - INFO - __main__ - global_steps 205600 - lr: 0.00000162  loss: -2.61794972
+02/25/2022 14:54:01 - INFO - __main__ - global_steps 205800 - lr: 0.00000159  loss: -2.68220644
+02/25/2022 14:54:21 - INFO - __main__ - global_steps 206000 - lr: 0.00000155  loss: -2.68122084
+02/25/2022 14:54:40 - INFO - __main__ - global_steps 206200 - lr: 0.00000152  loss: -2.66977005
+02/25/2022 14:55:00 - INFO - __main__ - global_steps 206400 - lr: 0.00000149  loss: -2.68215087
+02/25/2022 14:55:19 - INFO - __main__ - global_steps 206600 - lr: 0.00000146  loss: -2.71608436
+02/25/2022 14:55:39 - INFO - __main__ - global_steps 206800 - lr: 0.00000143  loss: -2.62593214
+02/25/2022 14:55:59 - INFO - __main__ - global_steps 207000 - lr: 0.00000140  loss: -2.68124758
+02/25/2022 14:56:19 - INFO - __main__ - global_steps 207200 - lr: 0.00000137  loss: -2.71092333
+02/25/2022 14:56:38 - INFO - __main__ - global_steps 207400 - lr: 0.00000134  loss: -2.76836105
+02/25/2022 14:56:57 - INFO - __main__ - global_steps 207600 - lr: 0.00000131  loss: -2.57933000
+02/25/2022 14:57:17 - INFO - __main__ - global_steps 207800 - lr: 0.00000128  loss: -2.72295384
+02/25/2022 14:57:37 - INFO - __main__ - global_steps 208000 - lr: 0.00000125  loss: -2.74380451
+02/25/2022 14:57:56 - INFO - __main__ - global_steps 208200 - lr: 0.00000122  loss: -2.66136054
+02/25/2022 14:58:16 - INFO - __main__ - global_steps 208400 - lr: 0.00000118  loss: -2.65826016
+02/25/2022 14:58:36 - INFO - __main__ - global_steps 208600 - lr: 0.00000115  loss: -2.76621565
+02/25/2022 14:58:55 - INFO - __main__ - global_steps 208800 - lr: 0.00000112  loss: -2.69106695
+02/25/2022 14:59:15 - INFO - __main__ - global_steps 209000 - lr: 0.00000109  loss: -2.64314073
+02/25/2022 14:59:34 - INFO - __main__ - global_steps 209200 - lr: 0.00000106  loss: -2.73858753
+02/25/2022 14:59:54 - INFO - __main__ - global_steps 209400 - lr: 0.00000103  loss: -2.68183510
+02/25/2022 15:00:13 - INFO - __main__ - global_steps 209600 - lr: 0.00000100  loss: -2.67413888
+02/25/2022 15:00:33 - INFO - __main__ - global_steps 209800 - lr: 0.00000097  loss: -2.64878147
+02/25/2022 15:00:53 - INFO - __main__ - global_steps 210000 - lr: 0.00000094  loss: -2.73702077
+02/25/2022 15:01:13 - INFO - __main__ - global_steps 210200 - lr: 0.00000091  loss: -2.68093672
+02/25/2022 15:01:32 - INFO - __main__ - global_steps 210400 - lr: 0.00000088  loss: -2.60836739
+02/25/2022 15:01:51 - INFO - __main__ - global_steps 210600 - lr: 0.00000085  loss: -2.76015837
+02/25/2022 15:02:11 - INFO - __main__ - global_steps 210800 - lr: 0.00000081  loss: -2.64450415
+02/25/2022 15:02:30 - INFO - __main__ - global_steps 211000 - lr: 0.00000078  loss: -2.63116614
+02/25/2022 15:02:50 - INFO - __main__ - global_steps 211200 - lr: 0.00000075  loss: -2.73278883
+02/25/2022 15:03:10 - INFO - __main__ - global_steps 211400 - lr: 0.00000072  loss: -2.64736801
+02/25/2022 15:03:30 - INFO - __main__ - global_steps 211600 - lr: 0.00000069  loss: -2.68149707
+02/25/2022 15:03:50 - INFO - __main__ - global_steps 211800 - lr: 0.00000066  loss: -2.62628249
+02/25/2022 15:04:09 - INFO - __main__ - global_steps 212000 - lr: 0.00000063  loss: -2.61658313
+02/25/2022 15:04:29 - INFO - __main__ - global_steps 212200 - lr: 0.00000060  loss: -2.67446556
+02/25/2022 15:04:48 - INFO - __main__ - global_steps 212400 - lr: 0.00000057  loss: -2.65975074
+02/25/2022 15:05:08 - INFO - __main__ - global_steps 212600 - lr: 0.00000054  loss: -2.62914275
+02/25/2022 15:05:27 - INFO - __main__ - global_steps 212800 - lr: 0.00000051  loss: -2.72597314
+02/25/2022 15:05:47 - INFO - __main__ - global_steps 213000 - lr: 0.00000048  loss: -2.61411872
+02/25/2022 15:06:06 - INFO - __main__ - global_steps 213200 - lr: 0.00000044  loss: -2.70351336
+02/25/2022 15:06:26 - INFO - __main__ - global_steps 213400 - lr: 0.00000041  loss: -2.73746806
+02/25/2022 15:06:45 - INFO - __main__ - global_steps 213600 - lr: 0.00000038  loss: -2.69666525
+02/25/2022 15:07:04 - INFO - __main__ - global_steps 213800 - lr: 0.00000035  loss: -2.77463553
+02/25/2022 15:07:24 - INFO - __main__ - global_steps 214000 - lr: 0.00000032  loss: -2.66821564
+02/25/2022 15:07:43 - INFO - __main__ - global_steps 214200 - lr: 0.00000029  loss: -2.70324279
+02/25/2022 15:08:02 - INFO - __main__ - global_steps 214400 - lr: 0.00000026  loss: -2.72041721
+02/25/2022 15:08:22 - INFO - __main__ - global_steps 214600 - lr: 0.00000023  loss: -2.60506950
+02/25/2022 15:08:41 - INFO - __main__ - global_steps 214800 - lr: 0.00000020  loss: -2.59605152
+02/25/2022 15:09:01 - INFO - __main__ - global_steps 215000 - lr: 0.00000017  loss: -2.75296571
+02/25/2022 15:09:20 - INFO - __main__ - global_steps 215200 - lr: 0.00000014  loss: -2.63112133
+02/25/2022 15:09:40 - INFO - __main__ - global_steps 215400 - lr: 0.00000010  loss: -2.68114162
+02/25/2022 15:09:59 - INFO - __main__ - global_steps 215600 - lr: 0.00000007  loss: -2.75678343
+02/25/2022 15:10:19 - INFO - __main__ - global_steps 215800 - lr: 0.00000004  loss: -2.74006256
+02/25/2022 15:10:38 - INFO - __main__ - global_steps 216000 - lr: 0.00000001  loss: -2.70799885
+02/25/2022 15:10:46 - INFO - __main__ - ********** Evaluate Step 216080 **********
+02/25/2022 15:10:46 - INFO - __main__ - ##--------------------- Dev
+02/25/2022 15:11:57 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 15:11:57 - INFO - __main__ - f1 = 0.8180356732756645
+02/25/2022 15:11:57 - INFO - __main__ - precision = 0.8151385044569889
+02/25/2022 15:11:57 - INFO - __main__ - recall = 0.820953509811669
+02/25/2022 15:11:57 - INFO - __main__ - --------------------------------------------------------------------------------
+02/25/2022 15:11:57 - INFO - __main__ - **--------------------- Dev End
+02/25/2022 15:11:58 - INFO - utils.utils - remove old ckpt: outputs/bert-bert-base-chinese/ckpt/step-216080-spo-f1-0.8180356732756645
+02/25/2022 15:11:58 - INFO - __main__ - *************************************
