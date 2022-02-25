@@ -17,14 +17,17 @@ GPLinker_pytorch
 - transformers>=4.16.2
 - accelerate==0.5.1
 - chinesebert==0.2.1
+
 安装依赖requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
 # 准备数据
 从 http://ai.baidu.com/broad/download?dataset=sked 下载数据。
+
 将`train_data.json`和`dev_data.json`压缩成`spo.zip`文件，并且放入`data`文件夹。
-当前`data/spo.zip`文件是本人提供精简后的数据集，其中`train_data.json`只有1000条数据，`dev_data.json`只有100条数据。
+
+当前`data/spo.zip`文件是本人提供精简后的数据集，其中`train_data.json`只有2000条数据，`dev_data.json`只有200条数据。
 
 # 运行
 ```bash
