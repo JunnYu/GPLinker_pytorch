@@ -1,0 +1,5 @@
+fastcore==1.3.29
+datasets==1.18.3
+transformers>=4.16.2
+accelerate==0.5.1
+chinesebert==0.2.1
