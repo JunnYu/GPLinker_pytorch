@@ -8,7 +8,16 @@ GPLinker_pytorch
 - 其中`TPLinker_Plus`代码在模型部分可能有点区别。
 
 # 更新
+- 2022/03/01 添加`tplinker_plus`在`duie_v1`上的结果。
 - 2022/02/25 现已在Dev分支更新最新的huggingface全家桶版本的代码，main分支是之前旧的代码（执行效率慢）
+
+# 结果
+Tips: `gplinker`在`RTX3090`条件下要训练`5-6h`。
+| method        | pretrained_model_name_or_path | f1                 | precision          | recall             |
+| ------------- | ----------------------------- | ------------------ | ------------------ | ------------------ |
+| gplinker      | hfl/chinese-roberta-wwm-ext   | 0.8214065255731926 | 0.8250077498782166 | 0.8178366038895478 |
+| gplinker      | bert-base-chinese             | 0.8198087178424598 | 0.8146470447994109 | 0.8250362175688137 |
+| tplinker_plus | bert-base-chinese             | 0.8202398259785976 | 0.8169624387588463 | 0.8235436147328684 |
 
 # 依赖
 所需的依赖如下：
@@ -67,13 +76,6 @@ accelerate launch train.py \
 - `topk`: 保存`topk`个数模型，默认为`1`。
 - `num_workers`: `dataloader`的`num_workers`参数，`linux`系统下发现`GPU`使用率不高的时候可以尝试设置这个参数大于`0`，而`windows`下最好设置为`0`，不然会报错。
 
-
-# 结果
-Tips: `gplinker`在`RTX3090`条件下要训练`5-6h`。
-| method   | pretrained_model_name_or_path | f1                 | precision          | recall             |
-| -------- | ----------------------------- | ------------------ | ------------------ | ------------------ |
-| gplinker | hfl/chinese-roberta-wwm-ext   | 0.8214065255731926 | 0.8250077498782166 | 0.8178366038895478 |
-| gplinker | bert-base-chinese             | 0.8198087178424598 | 0.8146470447994109 | 0.8250362175688137 |
 
 # Tensorboard日志
 <p align="center">
