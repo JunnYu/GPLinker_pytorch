@@ -238,24 +238,16 @@ class HandshakingKernel(nn.Module):
                 batch_first=True,
             )
 
-    def upper_reg2seq(self, ori_tensor):
+    def upper_reg2seq(self, tensor):
         """
         drop lower region and flat upper region to sequence
-        :param ori_tensor: (batch_size, matrix_size, matrix_size, hidden_size)
+        :param tensor: (batch_size, matrix_size, matrix_size, hidden_size)
         :return: (batch_size, matrix_size + ... + 1, hidden_size)
         """
-        tensor = ori_tensor.permute(0, 3, 1, 2).contiguous()
-        uppder_ones = (
-            torch.ones([tensor.size()[-1], tensor.size()[-1]])
-            .long()
-            .triu()
-            .to(ori_tensor.device)
-        )
-        upper_diag_ids = torch.nonzero(uppder_ones.view(-1), as_tuple=False).view(-1)
-        # flat_tensor: (batch_size, matrix_size * matrix_size, hidden_size)
-        flat_tensor = tensor.view(tensor.size(0), tensor.size(1), -1).permute(0, 2, 1)
-        tensor_upper = torch.index_select(flat_tensor, dim=1, index=upper_diag_ids)
-        return tensor_upper
+        bs, matrix_size, matrix_size, hidden_size = tensor.shape
+        mask = torch.ones(matrix_size, matrix_size, device=tensor.device).triu().bool()[
+            None, :, :, None]
+        return tensor.masked_select(mask).reshape(bs, -1, hidden_size)
 
     def forward(self, seq_hiddens):
         """
@@ -282,19 +274,17 @@ class HandshakingKernel(nn.Module):
 
         if self.only_look_after:
             if "lstm" in self.shaking_type:
-                batch_size, _, matrix_size, vis_hidden_size = visible.size()
+                batch_size, _, matrix_size, vis_hidden_size = visible.shape
                 # mask lower triangle
-                upper_visible = (
-                    visible.permute(0, 3, 1, 2).triu().permute(0, 2, 3, 1).contiguous()
-                )
-
+                mask = torch.ones(
+                    matrix_size, matrix_size, device=seq_hiddens.device).tril(-1).bool()[None, :, :, None]
                 # visible4lstm: (batch_size * matrix_size, matrix_size, hidden_size)
-                visible4lstm = upper_visible.view(-1, matrix_size, vis_hidden_size)
-                span_pre, _ = self.lstm4span(visible4lstm)
-                span_pre = span_pre.view(
+                visible4lstm = visible.masked_fill(mask, 0).flatten(0, 1)
+
+                span_pre = self.lstm4span(visible4lstm)[0]
+                span_pre = span_pre.reshape(
                     batch_size, matrix_size, matrix_size, vis_hidden_size
                 )
-
                 # drop lower triangle and convert matrix to sequence
                 # span_pre: (batch_size, shaking_seq_len, hidden_size)
                 span_pre = self.upper_reg2seq(span_pre)

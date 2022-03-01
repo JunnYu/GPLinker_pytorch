@@ -401,7 +401,7 @@ def get_auto_model(model_type, method="tplinker_plus"):
                     )
                 else:
                     setattr(self, self.base_model_prefix, base_cls(config))
-                # self.post_init()
+                self.post_init()
                 self.handshaking_kernel = HandshakingKernel(
                     config.hidden_size, shaking_type, inner_enc_type
                 )
