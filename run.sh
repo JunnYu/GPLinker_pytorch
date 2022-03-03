@@ -1,7 +1,7 @@
 accelerate launch train.py \
     --model_type bert \
     --pretrained_model_name_or_path bert-base-chinese \
-    --method gplinker \
+    --method tplinker_plus \
     --logging_steps 200 \
     --num_train_epochs 20 \
     --learning_rate 3e-5 \
@@ -14,4 +14,5 @@ accelerate launch train.py \
     --output_dir ./outputs \
     --max_length 128 \
     --topk 1 \
-    --num_workers 6
+    --num_workers 6 \
+    --model_cache_dir /mnt/f/hf/models

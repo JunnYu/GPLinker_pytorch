@@ -162,6 +162,7 @@ def main():
         args.pretrained_model_name_or_path,
         predicate2id=predicate2id,
         cache_dir=args.model_cache_dir,
+        use_efficient=args.use_efficient,
     )
 
     (train_dataloader, dev_dataloader) = get_dataloader_and_dataset(

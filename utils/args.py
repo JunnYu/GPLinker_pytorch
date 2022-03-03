@@ -159,6 +159,9 @@ def parse_args():
     parser.add_argument(
         "--model_cache_dir", default=None, type=str, help="Huggingface model cache_dir"
     )
+    parser.add_argument(
+        "--use_efficient", action="store_true", help="use EfficientGlobalPointer"
+    )
 
     args = parser.parse_args()
 

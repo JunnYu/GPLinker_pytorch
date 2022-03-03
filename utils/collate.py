@@ -68,7 +68,7 @@ class DataCollatorForGPLinker:
         if labels is None:  # for test
             if "text" in features[0].keys():
                 batch["text"] = [feature["text"] for feature in features]
-            if "text" in features[0].keys():
+            if "offset_mapping" in features[0].keys():
                 batch["offset_mapping"] = [
                     feature["offset_mapping"] for feature in features
                 ]
@@ -124,7 +124,7 @@ class DataCollatorForTPLinkerPlus:
         if labels is None:  # for test
             if "text" in features[0].keys():
                 batch["text"] = [feature["text"] for feature in features]
-            if "text" in features[0].keys():
+            if "offset_mapping" in features[0].keys():
                 batch["offset_mapping"] = [
                     feature["offset_mapping"] for feature in features
                 ]

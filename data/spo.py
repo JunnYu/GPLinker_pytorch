@@ -40,8 +40,6 @@ class SPO(datasets.GeneratorBasedBuilder):
     VERSION = datasets.Version("1.0.0")
 
     BUILDER_CONFIGS = [
-        # en
-        # nested
         datasets.BuilderConfig(name="spo", version=VERSION, description="spo"),
     ]
 

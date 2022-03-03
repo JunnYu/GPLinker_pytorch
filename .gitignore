@@ -127,3 +127,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 outputs
+data_caches
+./data/spo.zip.lock
