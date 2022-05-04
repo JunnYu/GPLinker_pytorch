@@ -12,41 +12,42 @@ model_name2model_cls = {
 }
 
 
-class GlobalPointer(nn.Module):
-    """全局指针模块
-    将序列的每个(start, end)作为整体来进行判断
-    """
+INF = 1e4
+EPSILON = 1e-5
 
-    def __init__(
-        self,
-        hidden_size,
-        heads=12,
-        head_size=64,
-        RoPE=True,
-        use_bias=True,
-        tril_mask=True,
-    ):
+class RotaryPositionEmbedding(nn.Module):
+    def __init__(self, dim, max_seq_len=512, unsqueeze_dim=None):
+        super().__init__()
+        inv_freq = 1.0 / (10000 ** (torch.arange(0, dim, 2).float() / dim))
+        t = torch.arange(max_seq_len, dtype=inv_freq.dtype)
+        freqs = torch.einsum("n , d -> n d", t, inv_freq)
+        if unsqueeze_dim:
+            freqs = freqs.unsqueeze(unsqueeze_dim)
+        self.register_buffer("sin", freqs.sin(), persistent=False)
+        self.register_buffer("cos", freqs.cos(), persistent=False)
+
+    def forward(self, t, seqlen=-2, past_key_value_length=0):
+        # t shape [bs, dim, seqlen, seqlen]
+        sin, cos = (
+            self.sin[past_key_value_length : past_key_value_length + seqlen, :],
+            self.cos[past_key_value_length : past_key_value_length + seqlen, :],
+        )
+        t1, t2 = t[..., 0::2], t[..., 1::2]
+        # 奇偶交错
+        return torch.stack([t1 * cos - t2 * sin, t1 * sin + t2 * cos], dim=-1).flatten(
+            -2, -1
+        )
+        
+class GlobalPointer(nn.Module):
+    def __init__(self, hidden_size, heads=12, head_size=64, RoPE=True, tril_mask=True, max_length=512):
         super().__init__()
         self.heads = heads
         self.head_size = head_size
         self.RoPE = RoPE
         self.tril_mask = tril_mask
-        self.dense = nn.Linear(hidden_size, heads * 2 * head_size, bias=use_bias)
-
-    def get_rotary_positions_embeddings(self, inputs, output_dim):
-        position_ids = torch.arange(
-            0, inputs.size(1), dtype=inputs.dtype, device=inputs.device
-        )
-
-        indices = torch.arange(
-            0, output_dim // 2, dtype=inputs.dtype, device=inputs.device
-        )
-        indices = torch.pow(10000.0, -2 * indices / output_dim)
-        embeddings = torch.einsum("n,d->nd", position_ids, indices)
-        embeddings = torch.stack([embeddings.sin(), embeddings.cos()], axis=-1).flatten(
-            1, 2
-        )
-        return embeddings[None, :, :]
+        self.dense = nn.Linear(hidden_size, heads * 2 * head_size)
+        if RoPE:
+            self.rotary = RotaryPositionEmbedding(head_size, max_length, unsqueeze_dim=-2) # n1d
 
     def forward(self, inputs, attention_mask=None):
         inputs = self.dense(inputs)
@@ -67,15 +68,7 @@ class GlobalPointer(nn.Module):
 
         # RoPE编码
         if self.RoPE:
-            pos = self.get_rotary_positions_embeddings(inputs, self.head_size)
-            cos_pos = torch.repeat_interleave(pos[..., None, 1::2], 2, axis=-1)
-            sin_pos = torch.repeat_interleave(pos[..., None, ::2], 2, axis=-1)
-
-            qw2 = torch.stack([-qw[..., 1::2], qw[..., ::2]], axis=-1).reshape_as(qw)
-
-            qw = qw * cos_pos + qw2 * sin_pos
-            kw2 = torch.stack([-kw[..., 1::2], kw[..., ::2]], axis=-1).reshape_as(kw)
-            kw = kw * cos_pos + kw2 * sin_pos
+            qw, kw = self.rotary(qw, seqlen), self.rotary(kw, seqlen)
 
         # 计算内积
         logits = torch.einsum("bmhd,bnhd->bhmn", qw, kw)
@@ -85,12 +78,14 @@ class GlobalPointer(nn.Module):
             attn_mask = (
                 1 - attention_mask[:, None, None, :] * attention_mask[:, None, :, None]
             )
-            logits = logits - attn_mask * 1e12
+            logits = logits - attn_mask * INF
 
+        # 排除下三角
         if self.tril_mask:
             # 排除下三角
             mask = torch.tril(torch.ones_like(logits), diagonal=-1)
-            logits = logits - mask * 1e12
+
+            logits = logits - mask * INF
 
         # scale返回
         return logits / self.head_size ** 0.5
@@ -101,55 +96,28 @@ class EfficientGlobalPointer(nn.Module):
     将序列的每个(start, end)作为整体来进行判断
     """
 
-    def __init__(
-        self,
-        hidden_size,
-        heads=12,
-        head_size=64,
-        RoPE=True,
-        use_bias=True,
-        tril_mask=True,
-    ):
+    def __init__(self, hidden_size, heads=12, head_size=64, RoPE=True, tril_mask=True, max_length=512):
         super().__init__()
         self.heads = heads
         self.head_size = head_size
         self.RoPE = RoPE
         self.tril_mask = tril_mask
-        self.dense1 = nn.Linear(hidden_size, head_size * 2, bias=use_bias)
-        self.dense2 = nn.Linear(head_size * 2, heads * 2, bias=use_bias)
-
-    def get_rotary_positions_embeddings(self, inputs, output_dim):
-        position_ids = torch.arange(
-            inputs.size(1), dtype=inputs.dtype, device=inputs.device
-        )
-
-        indices = torch.arange(
-            output_dim // 2, dtype=inputs.dtype, device=inputs.device
-        )
-        indices = torch.pow(10000.0, -2 * indices / output_dim)
-        embeddings = torch.einsum("n,d->nd", position_ids, indices)
-        embeddings = torch.stack([embeddings.sin(), embeddings.cos()], axis=-1).flatten(
-            1, 2
-        )
-        return embeddings[None, :, :]
+        self.dense1 = nn.Linear(hidden_size, head_size * 2)
+        self.dense2 = nn.Linear(head_size * 2, heads * 2)
+        if RoPE:
+            self.rotary = RotaryPositionEmbedding(head_size, max_length)
 
     def forward(self, inputs, attention_mask=None):
+        seqlen = inputs.shape[1]
         inputs = self.dense1(inputs)
         qw, kw = inputs[..., ::2], inputs[..., 1::2]
         # RoPE编码
         if self.RoPE:
-            pos = self.get_rotary_positions_embeddings(inputs, self.head_size)
-            cos_pos = torch.repeat_interleave(pos[..., 1::2], 2, axis=-1)
-            sin_pos = torch.repeat_interleave(pos[..., ::2], 2, axis=-1)
-
-            qw2 = torch.stack([-qw[..., 1::2], qw[..., ::2]], axis=-1).reshape_as(qw)
-            qw = qw * cos_pos + qw2 * sin_pos
-            kw2 = torch.stack([-kw[..., 1::2], kw[..., ::2]], axis=-1).reshape_as(kw)
-            kw = kw * cos_pos + kw2 * sin_pos
-
+            qw, kw = self.rotary(qw, seqlen), self.rotary(kw, seqlen)
+            
         # 计算内积
         logits = torch.einsum("bmd,bnd->bmn", qw, kw) / self.head_size ** 0.5
-        bias = self.dense2(inputs).transpose(1, 2) / 2  # 'bnh->bhn'
+        bias = self.dense2(inputs).transpose(1, 2) / 2  #'bnh->bhn'
         logits = logits[:, None] + bias[:, ::2, None] + bias[:, 1::2, :, None]
 
         # 排除padding
@@ -157,20 +125,20 @@ class EfficientGlobalPointer(nn.Module):
             attn_mask = (
                 1 - attention_mask[:, None, None, :] * attention_mask[:, None, :, None]
             )
-            logits = logits - attn_mask * 1e12
+            logits = logits - attn_mask * INF
 
         # 排除下三角
         if self.tril_mask:
             # 排除下三角
             mask = torch.tril(torch.ones_like(logits), diagonal=-1)
 
-            logits = logits - mask * 1e12
+            logits = logits - mask * INF
 
         return logits
 
 
 def sparse_multilabel_categorical_crossentropy(
-    y_true, y_pred, mask_zero=False, epsilon=1e-7, Inf=1e12
+    y_true, y_pred, mask_zero=False
 ):
     """稀疏版多标签分类的交叉熵
     说明：
@@ -185,18 +153,17 @@ def sparse_multilabel_categorical_crossentropy(
     zeros = torch.zeros_like(y_pred[..., :1])
     y_pred = torch.cat([y_pred, zeros], dim=-1)
     if mask_zero:
-        infs = zeros + Inf
-        y_pred = torch.cat([infs, y_pred[..., 1:]], dim=-1)
+        y_pred[..., 0] = INF
 
     y_pos_2 = torch.gather(y_pred, index=y_true, dim=-1)
     y_pos_1 = torch.cat([y_pos_2, zeros], dim=-1)
     if mask_zero:
-        y_pred = torch.cat([-infs, y_pred[..., 1:]], dim=-1)
+        y_pred[..., 0] = -INF
         y_pos_2 = torch.gather(y_pred, index=y_true, dim=-1)
     pos_loss = torch.logsumexp(-y_pos_1, dim=-1)
     all_loss = torch.logsumexp(y_pred, dim=-1)
     aux_loss = torch.logsumexp(y_pos_2, dim=-1) - all_loss
-    aux_loss = torch.clamp(1 - torch.exp(aux_loss), min=epsilon, max=1)
+    aux_loss = torch.clamp(1 - torch.exp(aux_loss), min=EPSILON, max=1)
     neg_loss = all_loss + torch.log(aux_loss)
     return pos_loss + neg_loss
 
