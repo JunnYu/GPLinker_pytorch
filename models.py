@@ -138,7 +138,7 @@ class EfficientGlobalPointer(nn.Module):
 
 
 def sparse_multilabel_categorical_crossentropy(
-    y_true, y_pred, mask_zero=False, epsilon=1e-7
+    y_true, y_pred, mask_zero=False
 ):
     """稀疏版多标签分类的交叉熵
     说明：
@@ -163,7 +163,7 @@ def sparse_multilabel_categorical_crossentropy(
     pos_loss = torch.logsumexp(-y_pos_1, dim=-1)
     all_loss = torch.logsumexp(y_pred, dim=-1)
     aux_loss = torch.logsumexp(y_pos_2, dim=-1) - all_loss
-    aux_loss = torch.clamp(1 - torch.exp(aux_loss), min=epsilon, max=1)
+    aux_loss = torch.clamp(1 - torch.exp(aux_loss), min=EPSILON, max=1)
     neg_loss = all_loss + torch.log(aux_loss)
     return pos_loss + neg_loss
 
