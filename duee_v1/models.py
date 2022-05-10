@@ -153,12 +153,13 @@ def sparse_multilabel_categorical_crossentropy(
     zeros = torch.zeros_like(y_pred[..., :1])
     y_pred = torch.cat([y_pred, zeros], dim=-1)
     if mask_zero:
-        y_pred[..., 0] = INF
+        infs = zeros + INF
+        y_pred = torch.cat([infs, y_pred[..., 1:]], dim=-1)
 
     y_pos_2 = torch.gather(y_pred, index=y_true, dim=-1)
     y_pos_1 = torch.cat([y_pos_2, zeros], dim=-1)
     if mask_zero:
-        y_pred[..., 0] = -INF
+        y_pred = torch.cat([-infs, y_pred[..., 1:]], dim=-1)
         y_pos_2 = torch.gather(y_pred, index=y_true, dim=-1)
     pos_loss = torch.logsumexp(-y_pos_1, dim=-1)
     all_loss = torch.logsumexp(y_pred, dim=-1)
